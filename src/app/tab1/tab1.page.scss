@@ -1,3 +1,14 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+.card-slider {
+  position: relative;
+  overflow: visible;
+  margin: 0 auto;
+  width: 90%;
+  // background: goldenrod;
+}
+.sym-card {
+  margin: 20px 0;
+  box-shadow: none;
+}
