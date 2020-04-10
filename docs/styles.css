@@ -24,7 +24,7 @@ body {
     width: 95%;
     margin: 30px auto;
     border-radius: 12px;
-    background-image: url('./../images/coronaVirus.jpg');
+    background-image: url('./images/coronaVirus.jpg');
     height: 85vh;
     background-size: cover;
     background-repeat: no-repeat;
