@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVIDE | COVID-19 Tracker Application</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Home of COVIDE.</h1>
+    <div id="dropdown">
+        <button>Languages</button>
+        <button>English</button>
+        <button>Hindi</button>
+        <button>Bengali</button>
+        <button>Kannada</button>
+        <button>Tamil</button>
+        <button>Urdu</button>
+    </div>
+    <div class="navigationBar">
+        <h1 class="title">COVIDE | COVID-19 Tracker</h1>
+    </div>
+    <div class="hero">
+        <div class="dropOverlay">
+            <div class="herotext">
+                <h1 class="mainTitle">Don't let it win!</h1>
+                <p class="description">Track Live Status and patients of COVID-19 Coronavirus on the COVIDE Application
+                    and get necessary help.</p>
+                <img class="getapp" src="../images/android-button.png" alt="Get Our Android App">
+                <img class="getapp" src="../images/web-app-button.png" alt="Get Our Web App">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+
+        const languages = {
+            "english": {
+                headline: "Don't let it win!",
+                sub_line: "Track Live Status and patients of COVID-19 Coronavirus on the COVIDE Application and get necessary help."
+            },
+            "hindi": {
+                headline: "कोरोना वायरस को जीतने न दें!",
+                sub_line: "COVIDE एप्लीकेशन पर COVID-19 कोरोनावायरस के लाइव स्थिति और रोगियों को ट्रैक करें और आवश्यक सहायता प्राप्त करें।"
+            },
+            "bengali": {
+                headline: "করোনার ভাইরাস জিততে দিবেন না!",
+                sub_line: "COVIDE অ্যাপ্লিকেশনে COVID-19 করোনভাইরাসটির লাইভ স্ট্যাটাস এবং রোগীদের সন্ধান করুন এবং প্রয়োজনীয় সহায়তা পান।"
+            },
+            "kannada": {
+                headline: "ಕರೋನಾ ವೈರಸ್ ಗೆಲ್ಲಲು ಬಿಡಬೇಡಿ!",
+                sub_line: "COVIDE ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ COVID-19 ಕೊರೊನಾವೈರಸ್‌ನ ಲೈವ್ ಸ್ಥಿತಿ ಮತ್ತು ರೋಗಿಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ ಮತ್ತು ಅಗತ್ಯವಾದ ಬೆಂಬಲವನ್ನು ಪಡೆಯಿರಿ."
+            },
+            "tamil": {
+                headline: "கொரோனா வைரஸை வெல்ல விடாதீர்கள்!",
+                sub_line: "COVIDE பயன்பாட்டில் COVID-19 கொரோனா வைரஸின் நேரடி நிலை மற்றும் நோயாளிகளைக் கண்காணித்து தேவையான ஆதரவைப் பெறுங்கள்."
+            },
+            "urdu": {
+                headline: "!کورونا وائرس کو جیتنے نہ دیں",
+                sub_line: "COVIDE درخواست پر CoVID-19 کورونا وائرس کے براہ راست درجہ اور مریضوں کا سراغ لگائیں اور ضروری تعاون حاصل کریں۔"
+            },
+
+        }
+
+        const { querySelector, addEventListener } = document;
+        const getEl = el => { return document.querySelector(el) }
+
+        $('button').click(function () {
+            let given_lang = $(this).html().toLowerCase();
+            load_translation(given_lang);
+        });
+
+        function load_translation(language) {
+            if (language !== 'languages') {
+                getEl('.mainTitle').innerHTML = languages[language].headline
+                getEl('.description').innerHTML = languages[language].sub_line
+            }
+        }
+
+        addEventListener("DOMContentLoaded", e => {
+            load_translation("english")
+        });
+
+    </script>
 </body>
+
 </html>
