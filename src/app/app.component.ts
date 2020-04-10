@@ -21,15 +21,11 @@ export class AppComponent {
   }
 
   initializeApp() {
-    if (this.platform.is('cordova')) {
-      this.nativeStorage.getItem('myitem')
-        .then(
-          data => console.log(data),
-          error => console.error(error)
-        );
-    } else {
-      console.log(`This app is running on browser`);
-    }
+    this.nativeStorage.getItem('myitem')
+      .then(
+        data => console.log(data),
+        error => console.error(error)
+      );
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
