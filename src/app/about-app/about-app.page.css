@@ -1,0 +1,10 @@
+.padded {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.centered {
+  margin-top: 5vh;
+  width: 120px;
+  border-radius: 16px;
+}

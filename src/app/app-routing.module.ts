@@ -9,6 +9,14 @@ const routes: Routes = [
   {
     path: 'eula',
     loadChildren: () => import('./eula/eula.module').then( m => m.EulaPageModule)
+  },
+  {
+    path: 'about-app',
+    loadChildren: () => import('./about-app/about-app.module').then( m => m.AboutAppPageModule)
+  },
+  {
+    path: 'open-source-information',
+    loadChildren: () => import('./open-source-information/open-source-information.module').then( m => m.OpenSourceInformationPageModule)
   }
 ];
 @NgModule({

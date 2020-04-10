@@ -1,10 +1,15 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: "app-tab4",
-  templateUrl: "tab4.page.html",
-  styleUrls: ["tab4.page.scss"],
+  selector: 'app-tab4',
+  templateUrl: 'tab4.page.html',
+  styleUrls: ['tab4.page.scss'],
 })
 export class Tab4Page {
-  constructor() {}
+  constructor(private navController: NavController) {}
+
+  loadPage(page) {
+    this.navController.navigateForward(page);
+  }
 }

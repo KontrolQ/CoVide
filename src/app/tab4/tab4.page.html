@@ -12,6 +12,46 @@
       <ion-title size="large">Tab 4</ion-title>
     </ion-toolbar>
   </ion-header> -->
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>More…</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <app-explore-container name="Tab 4 page"></app-explore-container>
+  <ion-list>
+    <ion-item button>
+      <ion-icon slot="start" name="people-outline"></ion-icon>
+      <ion-label>Infected Patients</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="bicycle-outline"></ion-icon>
+      <ion-label>Travel History</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="call-outline"></ion-icon>
+      <ion-label>Helpline Numbers</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+      <ion-label>FAQs</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="medkit-outline"></ion-icon>
+      <ion-label>Ministry Of Health & Family Welfare</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="megaphone-outline"></ion-icon>
+      <ion-label>App Feedback</ion-label>
+    </ion-item>
+    <ion-item button (click)="loadPage('about-app')">
+      <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+      <ion-label>About App</ion-label>
+    </ion-item>
+    <ion-item button (click)="loadPage('open-source-information')">
+      <ion-icon slot="start" name="heart-circle-outline"></ion-icon>
+      <ion-label>Open Source Information</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- <app-explore-container name="Tab 4 page"></app-explore-container> -->
 </ion-content>
