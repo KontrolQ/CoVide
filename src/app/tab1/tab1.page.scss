@@ -9,7 +9,58 @@ ion-content ion-toolbar {
   // background: goldenrod;
 }
 .sym-card {
+  padding: 0px;
   margin: 20px 0;
   box-shadow: none;
   border-radius: 8px;
+}
+.title {
+  position: relative;
+  margin-top: 30px;
+}
+.card-image {
+  position: flex;
+  width: 70%;
+  height: 90%;
+}
+.row-card {
+  padding: 0px;
+}
+.col-card {
+  padding: 0px;
+}
+.cards-details {
+  background-color: #fa9da3;
+  margin: 15px;
+}
+.custom-card {
+  width: 130px;
+  height: 100px;
+  margin: 20px;
+  background-color: seashell;
+  border-radius: 8px;
+}
+.heading1 {
+  padding: 10px;
+  color: red;
+}
+.heading2 {
+  padding: 10px;
+  color: blue;
+}
+.heading3 {
+  padding: 10px;
+  color: green;
+}
+.heading4 {
+  padding: 10px;
+  color: red;
+  background-color: seashell;
+}
+.top-state {
+  margin: 20px;
+}
+.see-all {
+  margin: 20px;
+  text-align: right;
 }
