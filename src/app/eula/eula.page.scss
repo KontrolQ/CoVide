@@ -1,0 +1,26 @@
+.paddedContent {
+    padding: 0px 20px;
+    max-height: 80vh;
+    overflow: scroll;
+    background-color: #ECF4F3;
+}
+
+.paddedContent > h5 {
+    color: #4AA98F;
+}
+
+.paddedContent > p {
+    color: #1A463C;
+}
+
+.titleContainer {
+    padding: 20px 20px;
+    background-color: #ECF4F3;
+}
+
+.title {
+    text-align: center;
+    color: #307466;
+    font-size: 1.3em;
+    font-weight: 700;
+}

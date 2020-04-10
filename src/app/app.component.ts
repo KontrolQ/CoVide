@@ -21,10 +21,16 @@ export class AppComponent {
   }
 
   initializeApp() {
-    this.nativeStorage.getItem('myitem')
+    this.nativeStorage.getItem('eluaAccepted')
       .then(
-        data => console.log(data),
-        error => console.error(error)
+        data => {
+          if (data === 'true') {
+
+          }
+        },
+        error => {
+          console.log('Hello');
+        }
       );
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
