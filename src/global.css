@@ -1,0 +1,26 @@
+@import url(~@ionic/angular/css/core.css);
+@import url(~@ionic/angular/css/normalize.css);
+@import url(~@ionic/angular/css/structure.css);
+@import url(~@ionic/angular/css/typography.css);
+@import url(~@ionic/angular/css/display.css);
+@import url(~@ionic/angular/css/padding.css);
+@import url(~@ionic/angular/css/float-elements.css);
+@import url(~@ionic/angular/css/text-alignment.css);
+@import url(~@ionic/angular/css/text-transformation.css);
+@import url(~@ionic/angular/css/flex-utils.css);
+:root {
+  --ion-color-lightgreen: #4aa98f;
+  --ion-color-lightgreen-rgb: 74, 169, 143;
+  --ion-color-lightgreen-contrast: #ffffff;
+  --ion-color-lightgreen-contrast-rgb: 0, 0, 0;
+  --ion-color-lightgreen-shade: #41957e;
+  --ion-color-lightgreen-tint: #5cb29a;
+}
+.ion-color-lightgreen {
+  --ion-color-base: var(--ion-color-lightgreen);
+  --ion-color-base-rgb: var(--ion-color-lightgreen-rgb);
+  --ion-color-contrast: var(--ion-color-lightgreen-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-lightgreen-contrast-rgb);
+  --ion-color-shade: var(--ion-color-lightgreen-shade);
+  --ion-color-tint: var(--ion-color-lightgreen-tint);
+}
