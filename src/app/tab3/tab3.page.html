@@ -26,7 +26,7 @@
     </ion-item>
     <ion-item>
       <ion-label>Choose City</ion-label>
-      <ion-select id="citySelectSheet" [(ngModel)]="selectedCity" [interfaceOptions]="citySelectOptions" interface="action-sheet"
+      <ion-select id="citySelectSheet" [(ngModel)]="selectedCity" (ionChange)="citySelected()" [interfaceOptions]="citySelectOptions" interface="action-sheet"
         placeholder="Select">
       </ion-select>
     </ion-item>
@@ -37,7 +37,7 @@
       </ion-select>
     </ion-item>
   </ion-list>
-  <ion-button color="primary" expand="block" fill="outline" mode="ios">Show Help</ion-button>
+  <ion-button (click)="showHelp()" color="primary" expand="block" fill="outline" mode="ios">Show Help</ion-button>
 
   <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>
