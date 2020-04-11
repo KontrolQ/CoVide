@@ -1,315 +1,330 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="seagreen">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Helpline Numbers</ion-title>
+    <div class="ifp">
+      <h1>Helpline Numbers</h1>
+      <p style="margin-top: 10px;">Always at your fingerips!</p>
+    </div>
   </ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)" value="states" color="seagreen">
+    <ion-segment-button checked value="states">
+      <ion-label>States</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="uts">
+      <ion-label>Union Territories</ion-label>
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
 
 <ion-content>
-  <ion-row class="heading" style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>State</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>Phone Number</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Andhra Paradesh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>0866-2410978</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Arunachal Pradesh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>9436055743</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Assam</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>6913347770</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Bihar</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Chhattisgarh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Goa</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Gujarat</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Haryana</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>8558893911</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Himachal Pradesh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Jharkhand</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Karnataka</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Kerala</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>0471-2552056</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Madhya Pradesh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Maharashtra</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>020-26127394</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Manipur</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>3852411668</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Meghalaya</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>108</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Mizoram</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>102</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Nagaland</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>7005539653</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Odisha</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>9439994859</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Punjab</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Rajasthan</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>0141-2225624</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Sikkim</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Tamil Nadu</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>044-29510500</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Telangana</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Tripura</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>0381-2315879</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Uttarakhand</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Uttar Pradesh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>18001805145</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>West Bengal</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>1800313444222, 03323412600</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row class="heading" style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Union Territory</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>Phone Number</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Andaman and Nicobar Islands</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>03192-232102</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Chandigarh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>9779558282</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Dadra and Nagar Haveli and Daman & Diu</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Delhi</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>011-22307145</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Jammu & Kashmir </ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>01912520982, 0194-2440283</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Ladakh</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>01982256462</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Lakshadweep</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-6>
-      <ion-label>Puducherry</ion-label>
-    </ion-col>
-    <ion-col col-6>
-      <ion-label>104</ion-label>
-    </ion-col>
-  </ion-row>
+  <div id="states">
+    <ion-row class="heading" style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>State</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label>Phone Number</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Andhra Paradesh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:0866-2410978">0866-2410978</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Arunachal Pradesh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:9436055743">9436055743</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Assam</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:6913347770">6913347770</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Bihar</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Chhattisgarh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Goa</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Gujarat</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Haryana</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:8558893911">8558893911</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Himachal Pradesh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Jharkhand</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Karnataka</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Kerala</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:0471-2552056">0471-2552056</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Madhya Pradesh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Maharashtra</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:020-26127394">020-26127394</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Manipur</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:3852411668">3852411668</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Meghalaya</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:108">108</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Mizoram</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:102">102</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Nagaland</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:7005539653">7005539653</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Odisha</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:9439994859">9439994859</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Punjab</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Rajasthan</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:0141-2225624">0141-2225624</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Sikkim</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Tamil Nadu</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:044-29510500">044-29510500</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Telangana</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Tripura</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:0381-2315879">0381-2315879</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Uttarakhand</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Uttar Pradesh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:18001805145">18001805145</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>West Bengal</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:1800313444222">1800313444222</a>, <a href="tel:03323412600">03323412600</a></ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div id="uts" style="display: none;">
+    <ion-row class="heading" style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Union Territory</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label>Phone Number</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Andaman and Nicobar Islands</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:03192-232102">03192-232102</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Chandigarh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:9779558282">9779558282</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Dadra and Nagar Haveli and Daman & Diu</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Delhi</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:011-22307145">011-22307145</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Jammu & Kashmir </ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:01912520982">01912520982</a>, <a href="tel:0194-2440283">0194-2440283</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Ladakh</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:01982256462">01982256462</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Lakshadweep</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-6>
+        <ion-label>Puducherry</ion-label>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label><a href="tel:104">104</a></ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
