@@ -1,5 +1,5 @@
 .stateWiseData {
-    width: 90%;
+    // width: 90%;
     margin: 20px auto 20px auto;
 }
 // ion-slides {
@@ -23,14 +23,13 @@
     display: block;
 }
 
-.swiper-slide h2 {
-    margin-top: 2.8rem;
-}
+// .swiper-slide h2 {
+//     margin-top: 2.8rem;
+// }
 
 .swiper-slide img {
-    max-height: 50%;
-    max-width: 80%;
-    margin: 60px 0 40px;
+    height: 230px;
+    width: 100%;
     pointer-events: none;
 }
 
@@ -48,6 +47,11 @@ p {
 p b {
     color: var(--ion-text-color, #000000);
 }
+
+.slide {
+    text-align: left !important;
+}
+
 .andhra-pradesh {
     background-image: url("https://www.indianluxurytrains.com/blog/wp-content/uploads/2015/01/Charminar-Hyderabad.jpg");
     background-size: cover;
