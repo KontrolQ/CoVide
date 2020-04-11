@@ -43,6 +43,11 @@ export class Tab3Page implements OnInit {
     for (const state of this.states) {
       $('#stateSelectSheet').append(`<ion-select-option value="${state}">${state}</ion-select-option>`);
     }
+    this.setCities();
+  }
+
+  setCities() {
+
   }
 
   stateSelected() {
