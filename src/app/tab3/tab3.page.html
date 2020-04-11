@@ -11,7 +11,33 @@
     <ion-toolbar>
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
+    #3A8A7B
   </ion-header> -->
+  <div class="seekhelp">
+    <h1>Seek Help</h1>
+    <p style="margin-top: 10px;">Find help when in need</p>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Choose State</ion-label>
+      <ion-select id="stateSelectSheet" [(ngModel)]="selectedState" (ionChange)="stateSelected()"
+        [interfaceOptions]="stateSelectOptions" interface="action-sheet" placeholder="Select">
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Choose City</ion-label>
+      <ion-select id="citySelectSheet" [interfaceOptions]="citySelectOptions" interface="action-sheet"
+        placeholder="Select">
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Choose Service Type</ion-label>
+      <ion-select id="serviceSelectSheet" [interfaceOptions]="serviceSelectOptions" interface="action-sheet"
+        placeholder="Select">
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button color="primary" expand="block" fill="outline" mode="ios">Show Help</ion-button>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>
