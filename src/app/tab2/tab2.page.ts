@@ -23,55 +23,85 @@ export class Tab2Page {
   }
   setCountryData(data) {
     this.countryData = data;
+    console.log(this.countryData);
+    this.updateUI();
   }
-  // updateUI() {
-  //   $("#table_data").empty();
-  //   for (let i = 0; i < this.countryData.length - 1; i++) {
-  //     $("#table_data").append(`
-  //     <tr style='border: solid 1px #000;'>
-  //        <td style='border: solid 1px #000;>CompanyC</td>
-  //        <td style='border: solid 1px #000;>0</td>
-  //        <td style='border: solid 1px #000;>7</td>
-  //        <td style='border: solid 1px #000;>2</td>
-  //        <td style='border: solid 1px #000;>0</td>
-  //   </tr>
-  //   `);
-  //   }
-  // }
+  updateUI() {
+    $("#World_card").empty();
+    for (let i = this.countryData.length - 1; i > -1; i--) {
+      $("#World_card").append(`
+       <ion-card>
+       <ion-card-header>
+       <ion-card-subtitle style="color: red;">+ ${this.countryData[i].todayCases} Today</ion-card-subtitle>
+       <ion-card-title style='font-weight: bold;'>${this.countryData[i].country}</ion-card-title>
+     </ion-card-header>
+     <ion-card-content>
+       <ion-row>
+       <ion-col style='color: #501717; background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(248, 235, 234, 1) 100%
+      );'>
+        <div style='font-size: 15px; padding-left: 10px'>Affected</div>
+        <div style='font-size: 15px;padding-left: 10px'>${this.countryData[i].cases}</div>
+        <div style='font-size: 11px; padding-left: 10px '>+ [${this.countryData[i].todayCases}]</div>
+       </ion-col>
+       <ion-col style=' color: #23308e;
+       background: linear-gradient(
+         90deg,
+         rgba(255, 255, 255, 1) 0%,
+         rgba(234, 243, 248, 1) 100%
+       );'>
+       <div style='font-size: 15px; padding-left: 10px'>Active</div>
+       <div style='font-size: 15px;padding-left: 10px'>${this.countryData[i].active}</div>
+       </ion-col>
+       <ion-col style='color: #238e43;
+       background: linear-gradient(
+         90deg,
+         rgba(255, 255, 255, 1) 0%,
+         rgba(234, 248, 234, 1) 100%
+       );'>
+       <div style='font-size: 15px; padding-left: 10px'>Recovered</div>
+       <div style='font-size: 15px;padding-left: 10px'>${this.countryData[i].recovered}</div>
+       </ion-col>
+       <ion-col style="  color: #2f2f2f;
+       background: linear-gradient(
+         90deg,
+         rgba(255, 255, 255, 1) 0%,
+         rgba(180, 180, 180, 1) 100%
+       );"
+       >
+       <div style='font-size: 15px; padding-left: 10px'>Deceased</div>
+        <div style='font-size: 15px;padding-left: 10px'>${this.countryData[i].deaths}</div>
+        <div style='font-size: 11px; padding-left: 10px '>+ [${this.countryData[i].todayDeaths}]</div>
+       </ion-col>
+       </ion-row>
+       <ion-row>
+       <ion-col style="text-align: center;">
+        <div>Critical</div>
+        <div>${this.countryData[i].critical}</div>
+        </ion-col>
+       <ion-col style="text-align: center;">
+       <div>Cases/1M</div>
+        <div> ${this.countryData[i].casesPerOneMillion}</div>
+       </ion-col>
+       <ion-col style="text-align: center;">
+       <div>Death/1M</div>
+        <div>${this.countryData[i].deathsPerOneMillion}</div>
+       </ion-col>
+       <ion-col style="text-align: center;">
+       <div>Tests</div>
+        <div >${this.countryData[i].tests}</div>
+       </ion-col>
+       <ion-col style="text-align: center;">
+       <div>Test/1M</div>
+        <div>${this.countryData[i].testsPerOneMillion}</div>
+       </ion-col>
+       </ion-row>
+     </ion-card-content>
+   </ion-card>
+       </ion-card>
+    `);
+    }
+  }
 }
-// <ion-row>
-//     <ion-col style="">
-//     <img style="width: 50%;" src='${this.countryData[i].countryInfo.flag}'>
-//     </img></ion-col>
-//     <ion-col
-//       style="color: black; font-size: 12px;"
-//       >${this.countryData[i].country}</ion-col
-//     >
-//     <ion-col
-//       style="background-color: #501717; color: white; border: 1px solid gray;"
-//       >
-//       <div>${this.countryData[i].cases}</div>
-//      <div> +[${this.countryData[i].todayCases}]</div>
-//      </ion-col
-//     >
-//     <ion-col
-//       style="background-color: #23308e; color: white; border: 1px solid gray;"
-//       >
-//       <div>${this.countryData[i].active}</div>
-//       </ion-col
-//     >
-//     <ion-col
-//       style="background-color: #238e43; color: white; border: 1px solid gray;"
-//       >
-//       <div>${this.countryData[i].recovered}</div>
-//       </ion-col
-//     >
-//     <ion-col
-//       style="background-color: #2f2f2f; color: white; border: 1px solid gray;"
-//       >
-//       <div>${this.countryData[i].deaths}</div>
-//       <div>+[${this.countryData[i].todayDeaths}]</div>
-//       </ion-col
-//     >
-
-//     </ion-row>

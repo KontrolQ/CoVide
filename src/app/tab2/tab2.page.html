@@ -1,8 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-title>
       World Covid-19 Cases
     </ion-title>
+  </ion-toolbar> -->
+  <ion-toolbar color="seagreen">
+    <div class="ifp">
+      <h1 style="text-align: center;">World Covid-19 Cases</h1>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -12,42 +17,6 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header> -->
-  <table>
-    <thead>
-      <tr>
-        <th style="font-size: smaller; background-color: grey; color: white;">
-          Country Name
-        </th>
-        <th
-          style="font-size: smaller; background-color: #501717; color: white;"
-        >
-          Affected Cases
-        </th>
-        <th
-          style="font-size: smaller; background-color: #23308e; color: white;"
-        >
-          Active Cases
-        </th>
-        <th
-          style="font-size: smaller; background-color: #238e43; color: white;"
-        >
-          Recovered Cases
-        </th>
-        <th
-          style="font-size: smaller; background-color: #2f2f2f; color: white;"
-        >
-          Deceased Cases
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+  <div id="World_card" class="WorldData"></div>
 </ion-content>
