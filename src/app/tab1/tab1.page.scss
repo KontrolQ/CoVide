@@ -94,7 +94,7 @@ ion-content ion-toolbar {
 }
 .grid-layout {
   display: grid;
-  grid-template-columns: auto auto ;
+  grid-template-columns: auto auto;
   grid-gap: 15px;
 }
 .grid-item {
@@ -103,19 +103,35 @@ ion-content ion-toolbar {
 }
 .affected {
   color: #501717;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(248,235,234,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 235, 234, 1) 100%
+  );
 }
 .active {
-  color: #23308E;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(234,243,248,1) 100%);
+  color: #23308e;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(234, 243, 248, 1) 100%
+  );
 }
 .recovered {
-  color: #238E43;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(234,248,234,1) 100%);
+  color: #238e43;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(234, 248, 234, 1) 100%
+  );
 }
 .deceased {
   color: #2f2f2f;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(180,180,180,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(180, 180, 180, 1) 100%
+  );
 }
 .tip {
   font-size: 12px;
@@ -130,4 +146,10 @@ ion-content ion-toolbar {
   color: rgb(49, 49, 49);
   font-weight: 700;
   margin-top: 30px;
+}
+.last-update {
+  font-size: 15px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  color: rgb(49, 49, 49);
 }

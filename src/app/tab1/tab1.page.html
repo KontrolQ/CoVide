@@ -19,7 +19,8 @@
           <ion-card-title>Symptoms of COVID-19</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          Worried if you have been infected by the virus or not? Do a check for symptoms and seek help if needed!
+          Worried if you have been infected by the virus or not? Do a check for
+          symptoms and seek help if needed!
         </ion-card-content>
       </div>
     </ion-card>
@@ -29,28 +30,41 @@
           <ion-card-title>Tips to Stay Safe</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          Wanna know how to stay safe during this pandemic? Just follow some simple rules.
+          Wanna know how to stay safe during this pandemic? Just follow some
+          simple rules.
         </ion-card-content>
       </div>
     </ion-card>
+  </div>
+  <div class="last-update">
+    Last update:
+    <span id="last_update"></span>
   </div>
   <div class="cards">
     <div class="grid-layout">
       <div class="grid-item affected">
         <div class="tip">Affected</div>
-        <div class="number">597k</div>
+        <div id="total_affected" class="number"></div>
+        <span class="add">+</span>
+        <span id="daily_affected" class="num-small"></span>
       </div>
       <div class="grid-item active">
         <div class="tip">Active</div>
-        <div class="number">471k</div>
+        <div id="active_data" class="number"></div>
+        <span class="add">+</span>
+        <span id="daily_active" class="num-small"></span>
       </div>
       <div class="grid-item recovered">
         <div class="tip">Recovered</div>
-        <div class="number">96k</div>
+        <div id="recovered_data" class="number"></div>
+        <span class="add">+</span>
+        <span id="daily_recovered" class="num-small"></span>
       </div>
       <div class="grid-item deceased">
         <div class="tip">Deceased</div>
-        <div class="number">30k</div>
+        <div id="deceased_data" class="number"></div>
+        <span class="add">+</span>
+        <span id="daily_death" class="num-small"></span>
       </div>
     </div>
   </div>
