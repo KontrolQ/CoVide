@@ -54,13 +54,25 @@ ion-content ion-toolbar {
 }
 .heading4 {
   padding: 10px;
-  color: red;
-  background-color: seashell;
+  color: blackx;
 }
 .top-state {
-  margin: 20px;
+  margin: 10px;
+  text-align: center;
 }
-.see-all {
-  margin: 20px;
+.slide {
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  margin-left: -60px;
+  box-shadow: 0px 0px 1px #999;
+}
+.arrows1 {
+  margin-top: 150px;
+  margin-left: 30px;
+}
+.arrows2 {
+  margin-top: 150px;
+  margin-right: 30px;
   text-align: right;
 }

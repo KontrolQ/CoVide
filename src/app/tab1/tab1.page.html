@@ -79,12 +79,31 @@
   <div>
     <ion-row>
       <ion-col>
-        <h5 class="top-state">TOP STATE</h5>
-      </ion-col>
-      <ion-col>
-        <h6 class="see-all">SEE ALL</h6>
+        <h5 class="top-state">ALL STATE</h5>
       </ion-col>
     </ion-row>
+
+    <div class="slider">
+      <ion-row>
+        <ion-col>
+          <div class="arrows1">
+            <a href="#" ng-click="prev()">
+              <ion-icon name="caret-back-circle-outline"></ion-icon>
+            </a>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="slide" ng-repeat="card in cards"></div>
+        </ion-col>
+        <ion-col>
+          <div class="arrows2">
+            <a href="#" ng-click="next()">
+              <ion-icon name="caret-forward-circle-outline"></ion-icon>
+            </a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
   </div>
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
