@@ -52,7 +52,7 @@ export class TravelHistoryPage implements OnInit {
     for (let i = 0; i < numberOfItem; i++) {
       const originalLength = this.length;
       $("#travel_history").append(`<ion-item>
-        <ion-label slot="end">
+        <ion-label slot="end" style="max-width:20%">
           <h2>${this.travelData[i + originalLength].pid}</h2>
         </ion-label>
         <ion-label>
