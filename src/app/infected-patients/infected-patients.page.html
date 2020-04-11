@@ -12,4 +12,24 @@
 
 <ion-content>
 
+  <ion-list id="infectedPatientList">
+    <!-- <ion-item>
+      <ion-label>
+        <h1>Recovered</h1>
+        <p>Student from Wuhan | Travelled from Wuhan</p>
+        <p>Age Bracket: 22</p>
+      </ion-label>
+      <ion-label slot="end">
+        <h2>
+          <ion-icon name="location-outline"></ion-icon> Thrissur, Kerala
+        </h2>
+      </ion-label>
+    </ion-item> -->
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loading-spinner="lines" loading-text="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>
