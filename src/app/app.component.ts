@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit} from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -12,9 +12,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
-
-  backButtonSubscription;
+export class AppComponent {
 
   constructor(
     private platform: Platform,
@@ -26,19 +24,6 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   ) {
     this.initializeApp();
     this.lockScreenOrientation();
-  }
-
-  ngOnInit() { }
-
-  // tslint:disable: no-string-literal
-  ngAfterViewInit() {
-    this.backButtonSubscription = this.platform.backButton.subscribe(() => {
-      navigator['app'].exitApp();
-    });
-  }
-
-  ngOnDestroy() {
-    this.backButtonSubscription.unsubscribe();
   }
 
   lockScreenOrientation() {
