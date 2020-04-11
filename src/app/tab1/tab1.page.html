@@ -12,8 +12,10 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header> -->
-  <ion-refresher close-duration slot="fixed" (ionRefresh)="loadData()">
-    <ion-refresher-content></ion-refresher-content>
+  <ion-refresher close-duration slot="fixed" (ionRefresh)="refreshContent($event)">
+    <ion-refresher-content
+      refreshingSpinner="lines">
+    </ion-refresher-content>
   </ion-refresher>
   <div class="card-slider">
     <ion-card class="sym-card symptoms" color="lightergrey">
