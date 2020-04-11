@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'helpline-numbers',
     loadChildren: () => import('./helpline-numbers/helpline-numbers.module').then( m => m.HelplineNumbersPageModule)
+  },
+  {
+    path: 'infected-patients',
+    loadChildren: () => import('./infected-patients/infected-patients.module').then( m => m.InfectedPatientsPageModule)
   }
 ];
 @NgModule({
