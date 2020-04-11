@@ -13,45 +13,47 @@
     </ion-toolbar>
   </ion-header> -->
   <div class="card-slider">
-    <ion-card class="sym-card" color="lightergrey">
-      <ion-card-header>
-        <ion-grid>
-          <ion-row class="row-card">
-            <ion-col class="col-card">
-              <img
-                src="../../assets/images/symptoms_girl.png"
-                class="card-image"
-              />
-            </ion-col>
-            <ion-col class="col-card">
-              <ion-card-title class="title"
-                >Symptoms of covid-19</ion-card-title
-              >
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-header>
+    <ion-card class="sym-card symptoms" color="lightergrey">
+      <div class="overlay">
+        <ion-card-header>
+          <ion-card-title>Symptoms of COVID-19</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Worried if you have been infected by the virus or not? Do a check for symptoms and seek help if needed!
+        </ion-card-content>
+      </div>
     </ion-card>
-    <ion-card class="sym-card" color="lightergrey">
-      <ion-card-header>
-        <ion-grid>
-          <ion-row class="row-card">
-            <ion-col class="col-card">
-              <img
-                src="../../assets/images/boy_with_dog.png"
-                class="card-image"
-              />
-            </ion-col>
-            <ion-col class="col-card">
-              <ion-card-title class="title">How to stay safe</ion-card-title>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-header>
+    <ion-card class="sym-card tips" color="lightergrey">
+      <div class="overlay">
+        <ion-card-header>
+          <ion-card-title>Tips to Stay Safe</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Wanna know how to stay safe during this pandemic? Just follow some simple rules.
+        </ion-card-content>
+      </div>
     </ion-card>
   </div>
   <div class="cards">
-    <ion-row class="row-card">
+    <div class="grid-layout">
+      <div class="grid-item affected">
+        <div class="tip">Affected</div>
+        <div class="number">597k</div>
+      </div>
+      <div class="grid-item active">
+        <div class="tip">Active</div>
+        <div class="number">471k</div>
+      </div>
+      <div class="grid-item recovered">
+        <div class="tip">Recovered</div>
+        <div class="number">96k</div>
+      </div>
+      <div class="grid-item deceased">
+        <div class="tip">Deceased</div>
+        <div class="number">30k</div>
+      </div>
+    </div>
+    <!-- <ion-row class="row-card">
       <ion-col class="col-card">
         <div class="custom-card">
           <h6 class="heading1">Total Case</h6>
@@ -74,7 +76,7 @@
           <h6 class="heading4">Deceased Case</h6>
         </div>
       </ion-col>
-    </ion-row>
+    </ion-row> -->
   </div>
   <div>
     <ion-row>
