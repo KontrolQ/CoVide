@@ -10,6 +10,10 @@ export class Tab1Page {
   constructor() {}
 
   ngOnInit() {
+    this.loadData();
+  }
+  loadData() {
+    let disabled = false;
     $.get("https://api.covid19india.org/data.json", (data, status) => {
       console.log(data);
       $("#total_affected").text(data.statewise[0].confirmed);
@@ -25,6 +29,7 @@ export class Tab1Page {
             parseInt(data.statewise[0].deltadeaths))
       );
       $("#last_update").text(data.statewise[0].lastupdatedtime);
+      disabled = false;
     });
   }
 }
