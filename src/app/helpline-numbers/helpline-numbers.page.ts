@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-helpline-numbers',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelplineNumbersPage implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+  }
+
+  segmentChanged(ev: any) {
+    $('#states').toggle();
+    $('#uts').toggle();
+    // console.log('Segment changed', ev);
   }
 
 }
