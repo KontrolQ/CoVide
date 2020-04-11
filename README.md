@@ -38,3 +38,8 @@ An Application written in Ionic 5 for tracking COVID-19 status, patients and get
     ````bash
     ionic serve
     ````
+    
+ World data api url: 
+   ''''''
+   url: 'https://corona.lmao.ninja/countries?sort=country'
+   ''''''

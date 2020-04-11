@@ -18,11 +18,11 @@
     </ion-toolbar>
   </ion-header> -->
   <div class="more">
-    <h1>More...</h1>
+    <h1>More</h1>
     <p style="margin-top: 10px;">'Cause there's always some more</p>
   </div>
   <ion-list>
-    <ion-item button>
+    <ion-item button (click)="loadPage('infected-patients')">
       <ion-icon slot="start" name="people-outline"></ion-icon>
       <ion-label>Infected Patients</ion-label>
     </ion-item>
