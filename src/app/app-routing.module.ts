@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'open-source-information',
     loadChildren: () => import('./open-source-information/open-source-information.module').then( m => m.OpenSourceInformationPageModule)
+  },
+  {
+    path: 'helpline-numbers',
+    loadChildren: () => import('./helpline-numbers/helpline-numbers.module').then( m => m.HelplineNumbersPageModule)
   }
 ];
 @NgModule({
