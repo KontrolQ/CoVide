@@ -1,26 +1,26 @@
 .stateWiseData {
-    // width: 90%;
-    margin: 20px auto 20px auto;
+  // width: 90%;
+  margin: 20px auto 20px auto;
 }
 // ion-slides {
 //     height: 230px;
 // }
 .state {
-    position: relative;
-    border-radius: 8px;
-    height: 100%;
-    width: 100%;
+  position: relative;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
 }
 .overlay {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.534);
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    padding: 30px 0px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.534);
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 30px 0px;
 }
 .swiper-slide {
-    display: block;
+  display: block;
 }
 
 // .swiper-slide h2 {
@@ -28,45 +28,45 @@
 // }
 
 .swiper-slide img {
-    height: 230px;
-    width: 100%;
-    pointer-events: none;
+  height: 230px;
+  width: 100%;
+  pointer-events: none;
 }
 
 b {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 p {
-    padding: 0 40px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--ion-color-step-600, #60646b);
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ion-color-step-600, #60646b);
 }
 
 p b {
-    color: var(--ion-text-color, #000000);
+  color: var(--ion-text-color, #000000);
 }
 
 .slide {
-    text-align: left !important;
+  text-align: left !important;
 }
 
 .andhra-pradesh {
-    background-image: url("https://www.indianluxurytrains.com/blog/wp-content/uploads/2015/01/Charminar-Hyderabad.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url("https://www.indianluxurytrains.com/blog/wp-content/uploads/2015/01/Charminar-Hyderabad.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .arunachal-pradesh {
-    background-image: url("https://www.holidify.com/images/tooltipImages/TAWANG.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url("https://www.holidify.com/images/tooltipImages/TAWANG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .assam {
-    background-image: url("https://www.incredible-northeastindia.com/images/assam-head.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url("https://www.incredible-northeastindia.com/images/assam-head.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
