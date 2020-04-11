@@ -26,7 +26,7 @@
     </ion-item>
     <ion-item>
       <ion-label>Choose City</ion-label>
-      <ion-select id="citySelectSheet" [interfaceOptions]="citySelectOptions" interface="action-sheet"
+      <ion-select id="citySelectSheet" [(ngModel)]="selectedCity" [interfaceOptions]="citySelectOptions" interface="action-sheet"
         placeholder="Select">
       </ion-select>
     </ion-item>

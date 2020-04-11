@@ -10,7 +10,9 @@ export class Tab3Page implements OnInit {
 
   allResources = [];
   states = [];
+  cities = [];
   selectedState = '';
+  selectedCity = '';
 
   constructor() { }
 
@@ -47,11 +49,46 @@ export class Tab3Page implements OnInit {
   }
 
   setCities() {
+    for (const resource of this.allResources) {
+      const currentCity = resource.city;
+      const currentState = resource.state;
+      const data = {
+        city: currentCity,
+        state: currentState
+      };
+      const ifCityPresent = this.searchCity(currentCity, this.cities);
+      if (ifCityPresent === undefined) {
+        this.cities.push(data);
+      }
+    }
+  }
 
+  searchCity(nameKey, myArray) {
+    // tslint:disable-next-line: prefer-for-of
+    for (let i = 0; i < myArray.length; i++) {
+      if (myArray[i].city === nameKey) {
+        return myArray[i];
+      }
+    }
   }
 
   stateSelected() {
-    console.log(this.selectedState);
+    const selectedState = this.selectedState;
+    this.selectedCity = null;
+    this.updateCitiesUI(selectedState);
+  }
+
+  updateCitiesUI(state) {
+    const citiesForCurrentState = [];
+    this.cities.forEach(city => {
+      if (city.state === state) {
+        citiesForCurrentState.push(city.city);
+      }
+    });
+    $('#citySelectSheet').empty();
+    for (const city of citiesForCurrentState) {
+      $('#citySelectSheet').append(`<ion-select-option value="${city}">${city}</ion-select-option>`);
+    }
   }
 
 }

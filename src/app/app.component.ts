@@ -26,7 +26,9 @@ export class AppComponent {
   }
 
   lockScreenOrientation() {
-    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+    if (this.platform.is('cordova')) {
+      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+    }
   }
 
   async noInternetAlert() {
