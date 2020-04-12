@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'frequently-ask-questions',
     loadChildren: () => import('./frequently-ask-questions/frequently-ask-questions.module').then( m => m.FrequentlyAskQuestionsPageModule)
+  },
+  {
+    path: 'seek-help-result-modal',
+    loadChildren: () => import('./seek-help-result-modal/seek-help-result-modal.module').then( m => m.SeekHelpResultModalPageModule)
   }
 ];
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { LoadingController, AlertController } from '@ionic/angular';
+import { LoadingController, AlertController, ModalController } from '@ionic/angular';
+import { SeekHelpResultModalPage } from '../seek-help-result-modal/seek-help-result-modal.page';
 
 @Component({
   selector: 'app-tab3',
@@ -12,13 +13,17 @@ export class Tab3Page implements OnInit {
   allResources = [];
   states = [];
   cities = [];
+  services = [];
+  servicesResult = [];
   isLoading = false;
   selectedState = null;
   selectedCity = null;
+  selectedService = null;
 
   constructor(
     public loadingController: LoadingController,
-    public alertController: AlertController
+    public alertController: AlertController,
+    public modalController: ModalController
   ) { }
 
   ngOnInit() {
@@ -112,6 +117,7 @@ export class Tab3Page implements OnInit {
   stateSelected() {
     const selectedState = this.selectedState;
     this.selectedCity = null;
+    this.selectedService = null;
     this.updateCitiesUI(selectedState);
   }
 
@@ -128,14 +134,64 @@ export class Tab3Page implements OnInit {
     }
   }
 
+  searchService(nameKey, myArray) {
+    // tslint:disable-next-line: prefer-for-of
+    for (let i = 0; i < myArray.length; i++) {
+      if (myArray[i].service === nameKey) {
+        return myArray[i];
+      }
+    }
+  }
+
+  setServicesForCity(city) {
+    for (const resource of this.allResources) {
+      const currentCity = city;
+      const currentService = resource.category;
+      if (resource.city === currentCity) {
+        if (!(this.services.includes(currentService))) {
+          this.services.push(currentService);
+        }
+      }
+    }
+    $('#serviceSelectSheet').empty();
+    for (const service of this.services) {
+      $('#serviceSelectSheet').append(`<ion-select-option value="${service}">${service}</ion-select-option>`);
+    }
+  }
+
   citySelected() {
     const selectedCity = this.selectedCity;
-    console.log(selectedCity);
+    this.selectedService = null;
+    this.setServicesForCity(selectedCity);
+  }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: SeekHelpResultModalPage,
+      componentProps: {
+        resultData: this.servicesResult
+      }
+    });
+    modal.onDidDismiss()
+      .then((data) => {
+        if (data) {
+          this.servicesResult = [];
+        }
+      });
+    return await modal.present();
   }
 
   showHelp() {
-    if (this.selectedCity === null || this.selectedState === null) {
+    if (this.selectedCity === null || this.selectedState === null || this.selectedService === null) {
       this.presentInvalidDataAlert();
+    } else {
+      this.servicesResult = [];
+      for (const resource of this.allResources) {
+        if (resource.city === this.selectedCity && resource.category === this.selectedService) {
+          this.servicesResult.push(resource);
+        }
+      }
+      this.presentModal();
     }
   }
 
