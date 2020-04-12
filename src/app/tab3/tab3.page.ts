@@ -143,7 +143,15 @@ export class Tab3Page implements OnInit {
     }
   }
 
+  citySelected() {
+    const selectedCity = this.selectedCity;
+    this.selectedService = null;
+    this.setServicesForCity(selectedCity);
+  }
+
   setServicesForCity(city) {
+    this.services = [];
+    $('#serviceSelectSheet').empty();
     for (const resource of this.allResources) {
       const currentCity = city;
       const currentService = resource.category;
@@ -153,16 +161,9 @@ export class Tab3Page implements OnInit {
         }
       }
     }
-    $('#serviceSelectSheet').empty();
     for (const service of this.services) {
       $('#serviceSelectSheet').append(`<ion-select-option value="${service}">${service}</ion-select-option>`);
     }
-  }
-
-  citySelected() {
-    const selectedCity = this.selectedCity;
-    this.selectedService = null;
-    this.setServicesForCity(selectedCity);
   }
 
   async presentModal() {
