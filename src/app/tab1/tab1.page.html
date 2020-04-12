@@ -12,13 +12,19 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header> -->
-  <ion-refresher close-duration slot="fixed" (ionRefresh)="refreshContent($event)">
-    <ion-refresher-content
-      refreshingSpinner="lines">
-    </ion-refresher-content>
+  <ion-refresher
+    close-duration
+    slot="fixed"
+    (ionRefresh)="refreshContent($event)"
+  >
+    <ion-refresher-content refreshingSpinner="lines"> </ion-refresher-content>
   </ion-refresher>
   <div class="card-slider">
-    <ion-card class="sym-card symptoms" color="lightergrey">
+    <ion-card
+      class="sym-card symptoms"
+      color="lightergrey"
+      (click)="loadPage('symptoms')"
+    >
       <div class="overlay">
         <ion-card-header>
           <ion-card-title>Symptoms of COVID-19</ion-card-title>
@@ -29,7 +35,11 @@
         </ion-card-content>
       </div>
     </ion-card>
-    <ion-card class="sym-card tips" color="lightergrey">
+    <ion-card
+      class="sym-card tips"
+      color="lightergrey"
+      (click)="loadPage('tips-to-safe')"
+    >
       <div class="overlay">
         <ion-card-header>
           <ion-card-title>Tips to Stay Safe</ion-card-title>
