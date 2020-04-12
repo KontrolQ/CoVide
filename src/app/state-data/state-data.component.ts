@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as $ from "jquery";
-import { NavController } from '@ionic/angular'
+import { NavController } from "@ionic/angular";
 
 @Component({
   selector: "app-state-data",
@@ -155,8 +155,8 @@ export class StateDataComponent implements OnInit {
     </ion-slide>`);
     }
     $(".cardToClickForStateData").click((event) => {
-      const id = ($(event.target).attr('id'));
-      this.navController.navigateForward(`district-wise?state=${id}`)
+      const name = event.currentTarget.id;
+      this.navController.navigateForward(`district-wise?state=${name}`);
     });
   }
 }
