@@ -1,0 +1,56 @@
+.ifp {
+  // text-transform: capitalize;
+  text-align: center;
+  color: white;
+  background-color: #3a8a7b;
+  padding: 30px 0px;
+  position: relative;
+  left: -20px;
+}
+h3 {
+  text-align: center;
+}
+ion-back-button {
+  color: white;
+  background-color: #3a8a7b;
+}
+
+ion-header {
+  box-shadow: none;
+}
+.collapsible {
+  background-color: #307466;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #307466;
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}

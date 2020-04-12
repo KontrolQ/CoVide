@@ -58,7 +58,7 @@ export class Tab2Page {
       $("#World_card").append(`
        <ion-card>
        <ion-card-header>
-       <ion-card-subtitle style="color: red;">+ ${this.countryData[i].todayCases} Today</ion-card-subtitle>
+       <ion-card-subtitle style="color: red;">+${this.countryData[i].todayCases} Today</ion-card-subtitle>
        <ion-card-title style='font-weight: bold;'>${this.countryData[i].country}</ion-card-title>
      </ion-card-header>
      <ion-card-content>
