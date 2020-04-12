@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-eula',
@@ -8,13 +9,20 @@ import { Router } from '@angular/router';
 })
 export class EulaPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private nativeStorage: NativeStorage,
+    private navController: NavController
+  ) { }
 
   ngOnInit() {
   }
 
   acceptEULA() {
-    this.router.navigate([''], {replaceUrl: true});
+    this.nativeStorage.setItem('eluaAccepted', { property: 'true'})
+      .then(
+        () => this.navController.navigateRoot(''),
+        error => console.error('Error storing item', error)
+      );
   }
 
 }

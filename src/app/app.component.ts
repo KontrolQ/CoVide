@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
@@ -20,7 +20,8 @@ export class AppComponent {
     private statusBar: StatusBar,
     private nativeStorage: NativeStorage,
     public alertController: AlertController,
-    private screenOrientation: ScreenOrientation
+    private screenOrientation: ScreenOrientation,
+    private navController: NavController
   ) {
     this.initializeApp();
     this.lockScreenOrientation();
@@ -47,12 +48,10 @@ export class AppComponent {
     this.nativeStorage.getItem('eluaAccepted')
       .then(
         data => {
-          if (data === 'true') {
-
-          }
+          this.navController.navigateRoot('');
         },
         error => {
-          console.log('Hello');
+          // this.navController.navigateRoot('eula');
         }
       );
     this.platform.ready().then(() => {

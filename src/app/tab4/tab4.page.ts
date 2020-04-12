@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from '@ionic/angular';
+import { NavController, AlertController, ActionSheetController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-tab4',
@@ -7,10 +8,49 @@ import { NavController, AlertController } from '@ionic/angular';
   styleUrls: ['tab4.page.scss'],
 })
 export class Tab4Page {
-  constructor(private navController: NavController, public alertController: AlertController) { }
+  constructor(
+    private navController: NavController,
+    public alertController: AlertController,
+    public actionSheetController: ActionSheetController,
+    public browser: InAppBrowser
+  ) { }
 
   loadPage(page) {
     this.navController.navigateForward(page);
+  }
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      buttons: [{
+        text: 'Feature Request',
+        icon: 'add-circle-outline',
+        handler: () => {
+          this.featureRequest();
+        }
+      }, {
+        text: 'Bug Report',
+        icon: 'bug-outline',
+        handler: () => {
+          this.bugReport();
+        }
+      }, {
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel'
+      }]
+    });
+    await actionSheet.present();
+  }
+
+  // tslint:disable: max-line-length
+  featureRequest() {
+    const URL = this.browser.create('https://github.com/TheOrangeCoffeeProject/CoVide/issues/new?assignees=&labels=&template=feature_request.md&title=');
+    URL.show();
+  }
+
+  bugReport() {
+    const URL = this.browser.create('https://github.com/TheOrangeCoffeeProject/CoVide/issues/new?assignees=&labels=&template=bug_report.md&title=');
+    URL.show();
   }
 
   async presentAlert(header, message) {

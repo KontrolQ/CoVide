@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { SeekHelpResultModalPage } from './seek-help-result-modal/seek-help-result-modal.page';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @NgModule({
   declarations: [AppComponent, SeekHelpResultModalPage],
@@ -21,6 +22,7 @@ import { SeekHelpResultModalPage } from './seek-help-result-modal/seek-help-resu
     SplashScreen,
     NativeStorage,
     ScreenOrientation,
+    InAppBrowser,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],
