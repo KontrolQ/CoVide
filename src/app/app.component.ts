@@ -51,7 +51,7 @@ export class AppComponent {
           this.navController.navigateRoot('');
         },
         error => {
-          // this.navController.navigateRoot('eula');
+          this.navController.navigateRoot('eula');
         }
       );
     this.platform.ready().then(() => {
