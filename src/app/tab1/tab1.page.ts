@@ -20,6 +20,7 @@ export class Tab1Page implements OnInit {
     }, 2000);
   }
   loadPage(page) {
+    console.log(page);
     this.navController.navigateForward(page);
   }
   loadData() {

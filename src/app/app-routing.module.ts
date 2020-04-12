@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'tips-to-safe',
     loadChildren: () => import('./tips-to-safe/tips-to-safe.module').then( m => m.TipsToSafePageModule)
+  },
+  {
+    path: 'district-wise',
+    loadChildren: () => import('./district-wise/district-wise.module').then( m => m.DistrictWisePageModule)
   }
 ];
 @NgModule({
