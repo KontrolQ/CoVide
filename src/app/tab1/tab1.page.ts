@@ -47,8 +47,7 @@ export class Tab1Page implements OnInit {
   }
 
   getUpdate() {
-    const URL = this.browser.create('https://theorangecoffeeproject.github.io/CoVide/');
-    URL.show();
+    window.open('https://theorangecoffeeproject.github.io/CoVide/', '_system');
   }
 
   checkUpdate() {
