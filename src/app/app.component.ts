@@ -45,7 +45,6 @@ export class AppComponent {
   }
 
   initializeApp() {
-    // this.nativeStorage.clear();
     this.nativeStorage.getItem('eluaAccepted')
       .then(
         data => {
