@@ -29,6 +29,14 @@ const routes: Routes = [
   {
     path: 'travel-history',
     loadChildren: () => import('./travel-history/travel-history.module').then( m => m.TravelHistoryPageModule)
+  },
+  {
+    path: 'app-feedback',
+    loadChildren: () => import('./app-feedback/app-feedback.module').then( m => m.AppFeedbackPageModule)
+  },
+  {
+    path: 'frequently-ask-questions',
+    loadChildren: () => import('./frequently-ask-questions/frequently-ask-questions.module').then( m => m.FrequentlyAskQuestionsPageModule)
   }
 ];
 @NgModule({
