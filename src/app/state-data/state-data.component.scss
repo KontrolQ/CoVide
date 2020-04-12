@@ -1,6 +1,9 @@
 .stateWiseData {
   // width: 90%;
-  margin: 20px auto 20px auto;
+  margin: 20px auto 0px auto;
+}
+#state_data_card {
+  width: 100%;
 }
 // ion-slides {
 //     height: 230px;
@@ -48,7 +51,8 @@ p b {
   color: var(--ion-text-color, #000000);
 }
 
-.slide {
+ion-slide > .slide {
+  width: 90% !important;
   text-align: left !important;
 }
 

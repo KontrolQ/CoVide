@@ -23,7 +23,6 @@ export class Tab1Page implements OnInit {
   loadData() {
     let disabled = false;
     $.get('https://api.covid19india.org/data.json', (data, status) => {
-      console.log(data);
       $('#total_affected').text(data.statewise[0].confirmed);
       $('#active_data').text(data.statewise[0].active);
       $('#recovered_data').text(data.statewise[0].recovered);
