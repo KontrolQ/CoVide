@@ -39,6 +39,10 @@ const routes: Routes = [
     loadChildren: () => import('./frequently-ask-questions/frequently-ask-questions.module').then( m => m.FrequentlyAskQuestionsPageModule)
   },
   {
+    path: 'seek-help-result-modal',
+    loadChildren: () => import('./seek-help-result-modal/seek-help-result-modal.module').then( m => m.SeekHelpResultModalPageModule)
+  },
+  {
     path: 'symptoms',
     loadChildren: () => import('./symptoms/symptoms.module').then( m => m.SymptomsPageModule)
   },
