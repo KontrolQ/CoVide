@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'symptoms',
     loadChildren: () => import('./symptoms/symptoms.module').then( m => m.SymptomsPageModule)
+  },
+  {
+    path: 'tips-to-safe',
+    loadChildren: () => import('./tips-to-safe/tips-to-safe.module').then( m => m.TipsToSafePageModule)
   }
 ];
 @NgModule({
