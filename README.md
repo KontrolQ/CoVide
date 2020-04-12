@@ -25,7 +25,7 @@ An Application written in Ionic 5 for tracking COVID-19 status, patients and get
 - Clone this repository
 
     ````bash
-    git clone https://github.com/luciferreeves/CoVide.git
+    git clone https://github.com/TheOrangeCoffeeProject/CoVide.git
     ````
 
 - Migrate to the folder and install dependencies
