@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'frequently-ask-questions',
     loadChildren: () => import('./frequently-ask-questions/frequently-ask-questions.module').then( m => m.FrequentlyAskQuestionsPageModule)
+  },
+  {
+    path: 'symptoms',
+    loadChildren: () => import('./symptoms/symptoms.module').then( m => m.SymptomsPageModule)
   }
 ];
 @NgModule({
