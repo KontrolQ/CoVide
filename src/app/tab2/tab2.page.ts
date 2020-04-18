@@ -36,13 +36,11 @@ export class Tab2Page {
   }
 
   loadCountryData() {
-    $.get(
-      "https://corona.lmao.ninja/countries?sort=country",
-      (data, status) => {
-        this.dismissLoading();
-        this.setCountryData(data);
-      }
-    );
+    $.get("https://api.covid19api.com/summary", (data, status) => {
+      // console.log(data.Countries);
+      this.dismissLoading();
+      this.setCountryData(data.Countries);
+    });
   }
   async dismissLoading() {
     this.isLoading = false;
@@ -54,12 +52,16 @@ export class Tab2Page {
   }
   updateUI() {
     $("#World_card").empty();
-    for (let i = this.countryData.length - 1; i > -1; i--) {
+    for (let i = 0; i < this.countryData.length - 1; i++) {
       $("#World_card").append(`
        <ion-card>
        <ion-card-header>
-       <ion-card-subtitle style="color: red;">+${this.countryData[i].todayCases} Today</ion-card-subtitle>
-       <ion-card-title style='font-weight: bold;'>${this.countryData[i].country}</ion-card-title>
+       <ion-card-subtitle style="color: red;">+${
+         this.countryData[i].NewConfirmed
+       } Today</ion-card-subtitle>
+       <ion-card-title style='font-weight: bold;'>${
+         this.countryData[i].Country
+       }</ion-card-title>
      </ion-card-header>
      <ion-card-content>
        <ion-row>
@@ -69,8 +71,10 @@ export class Tab2Page {
         rgba(248, 235, 234, 1) 100%
       );'>
         <div>Affected</div>
-        <div >${this.countryData[i].cases}</div>
-        <div style='font-size: 11px;'>+ [${this.countryData[i].todayCases}]</div>
+        <div >${this.countryData[i].TotalConfirmed}</div>
+        <div style='font-size: 11px;'>+ [${
+          this.countryData[i].NewConfirmed
+        }]</div>
        </ion-col>
        <ion-col style='text-align: center; color: #23308e;
        background: linear-gradient(
@@ -79,7 +83,11 @@ export class Tab2Page {
          rgba(234, 243, 248, 1) 100%
        );'>
        <div >Active</div>
-       <div >${this.countryData[i].active}</div>
+       <div >${
+         parseInt(this.countryData[i].TotalConfirmed) -
+         (parseInt(this.countryData[i].TotalRecovered) +
+           parseInt(this.countryData[i].TotalDeaths))
+       }</div>
        </ion-col>
        <ion-col style='text-align: center; color: #238e43;
        background: linear-gradient(
@@ -88,7 +96,9 @@ export class Tab2Page {
          rgba(234, 248, 234, 1) 100%
        );'>
        <div >Recovered</div>
-       <div >${this.countryData[i].recovered}</div>
+
+       <div >${this.countryData[i].TotalRecovered}</div>
+  <div style='font-size: 11px;'>+ [${this.countryData[i].NewRecovered}]</div>
        </ion-col>
        <ion-col style="text-align: center; color: #2f2f2f;
        background: linear-gradient(
@@ -98,30 +108,8 @@ export class Tab2Page {
        );"
        >
        <div>Deceased</div>
-        <div >${this.countryData[i].deaths}</div>
-        <div style='font-size: 11px;'>+ [${this.countryData[i].todayDeaths}]</div>
-       </ion-col>
-       </ion-row>
-       <ion-row>
-       <ion-col style="text-align: center;">
-        <div>Critical</div>
-        <div>${this.countryData[i].critical}</div>
-        </ion-col>
-       <ion-col style="text-align: center;">
-       <div>Cases/1M</div>
-        <div> ${this.countryData[i].casesPerOneMillion}</div>
-       </ion-col>
-       <ion-col style="text-align: center;">
-       <div>Death/1M</div>
-        <div>${this.countryData[i].deathsPerOneMillion}</div>
-       </ion-col>
-       <ion-col style="text-align: center;">
-       <div>Tests</div>
-        <div >${this.countryData[i].tests}</div>
-       </ion-col>
-       <ion-col style="text-align: center;">
-       <div>Test/1M</div>
-        <div>${this.countryData[i].testsPerOneMillion}</div>
+        <div >${this.countryData[i].TotalDeaths}</div>
+        <div style='font-size: 11px;'>+ [${this.countryData[i].NewDeaths}]</div>
        </ion-col>
        </ion-row>
      </ion-card-content>
