@@ -15,15 +15,94 @@ export class Tab1Page implements OnInit {
   patch = 0;
   updates = [];
   showNotification = false;
+  recentData = [];
   constructor(
     private navController: NavController,
     private alertController: AlertController,
     private browser: InAppBrowser
-  ) {}
+  ) { }
 
   ngOnInit() {
+    this.getRecentData();
     this.checkUpdate();
     this.loadData();
+  }
+
+  getRecentData() {
+    $.get('https://api.covid19india.org/data.json', data => {
+      this.setRecentData(data);
+    });
+  }
+
+  setRecentData(data) {
+    for (const item of data.cases_time_series) {
+      const chartData = {
+        totalconfirmed: item.totalconfirmed,
+        date: item.date
+      };
+      this.recentData.push(chartData);
+    }
+    this.showRecentData();
+  }
+
+  showRecentData() {
+    const datasetData = [];
+    const labelsData = [];
+    for (let i = (this.recentData.length - 10); i < this.recentData.length; i++) {
+      // tslint:disable-next-line: radix
+      datasetData.push(parseInt(this.recentData[i].totalconfirmed));
+    }
+    for (let i = (this.recentData.length - 10); i < this.recentData.length; i++) {
+      labelsData.push(this.recentData[i].date);
+    }
+    const canvas = document.getElementById('history_data') as HTMLCanvasElement;
+    const ctx = canvas.getContext('2d');
+    const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(0, 'rgba(58,72,237,0.3)');
+    gradient.addColorStop(1, 'rgba(255,255,255,1)');
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labelsData,
+        datasets: [{
+          label: 'Total Reported Cases',
+          data: datasetData,
+          backgroundColor: 'transparent',
+          borderColor: '#3a48ed',
+        }]
+      },
+      options: {
+        point: {
+          radius: 3
+        },
+        legend: {
+          display: false
+        },
+        maintainAspectRatio: false,
+        scales: {
+          animation: {
+            duration: 2000,
+            easing: 'easeOutQuart'
+          },
+          xAxes: [{
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              display: false
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              display: false
+            }
+          }]
+        }
+      }
+    });
   }
 
   async updateApp() {
@@ -102,8 +181,8 @@ export class Tab1Page implements OnInit {
       $('#daily_active').text(
         // tslint:disable: radix
         parseInt(data.statewise[0].deltaconfirmed) -
-          (parseInt(data.statewise[0].deltarecovered) +
-            parseInt(data.statewise[0].deltadeaths))
+        (parseInt(data.statewise[0].deltarecovered) +
+          parseInt(data.statewise[0].deltadeaths))
       );
       $('#last_update').text(data.statewise[0].lastupdatedtime);
       disabled = false;
