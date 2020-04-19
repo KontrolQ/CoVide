@@ -21,8 +21,8 @@
 
 .title {
     text-align: center;
-    color: #307466;
-    font-size: 1.3em;
+    color: #fff;
+    font-size: 2rem;
     font-weight: 700;
 }
 .agree {
@@ -41,4 +41,73 @@
 .ripple-parent {
     position: relative;
     overflow: hidden;
+}
+
+
+
+.fullPage {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #3A48ED;
+    padding: 5vh 0px;
+}
+
+.image {
+    width: 100%;
+    height: 60vh;
+    background-image: url('../../assets/images/blue_bg_man.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.subtitle {
+    width: 90%;
+    margin: 10px auto 10px auto;
+    text-align: center;
+    color: white;
+}
+
+.button_getStarted {
+    width: 90%;
+    margin: 30px auto 10px auto;
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.get_started {
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 4px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #fff;
+    text-align: left;
+    position: relative;
+    border: none;
+    outline: none;
+}
+
+.end {
+    background-color: #3A48ED;
+    color: white;
+    position: absolute;
+    top: 7.5px;
+    right: 8px;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+a {
+    color: #F4F3F9;
+    text-decoration: underline;
+}
+.play_sound {
+    position: relative;
+    left: 30px;
+    top: 5px;
 }
