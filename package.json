@@ -30,6 +30,7 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "browser": "^0.2.6",
+    "chart.js": "^2.9.3",
     "check-internet-connected": "^2.0.5",
     "cordova-android": "8.1.0",
     "cordova-browser": "6.0.0",

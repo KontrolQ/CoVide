@@ -270,7 +270,13 @@ p b {
   border-radius: 50%;
 }
 
-ion-searchbar {
+.chartData {
+  background-color: #fff;
+  border-radius: 8px;
   width: 90%;
   margin: 0 auto;
+}
+
+#history_data {
+  background-color: #fff;
 }
