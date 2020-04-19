@@ -13,18 +13,6 @@ ion-content ion-toolbar {
   width: 90%;
   // background: goldenrod;
 }
-.dummy_text {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 7.5vh;
-  color: #080b37;
-  p {
-    color: #080b37;
-  }
-}
-
 .lil-left {
   margin-left: 5%;
 }
@@ -537,8 +525,33 @@ button {
 .chartData {
   background-color: #fff;
   border-radius: 8px;
-  width: 90%;
+  // width: 90%;
   margin: 0 auto;
+}
+
+.dummy_text {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #ffffff;
+  p {
+    color: #ffffff;
+  }
+}
+
+
+.headerArea {
+  background-color: #3a48ed;
+  padding: 3vh 5% 9vh 5%;
+}
+
+.dataArea {
+  background-color: #fff;
+  padding-top: 50px;
+  border-radius: 48px 48px 0px 0px;
+  position: relative;
+  top: -50px;
 }
 
 #history_data {
