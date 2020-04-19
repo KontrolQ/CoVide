@@ -50,27 +50,12 @@ p {
 p b {
   color: var(--ion-text-color, #000000);
 }
-
-ion-slide > .slide {
-  width: 90% !important;
-  text-align: left !important;
-}
-
-.andhra-pradesh {
-  background-image: url("https://www.indianluxurytrains.com/blog/wp-content/uploads/2015/01/Charminar-Hyderabad.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.arunachal-pradesh {
-  background-image: url("https://www.holidify.com/images/tooltipImages/TAWANG.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.assam {
-  background-image: url("https://www.incredible-northeastindia.com/images/assam-head.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.horizontal-scroll {
+  padding: 5%;
+  overflow: auto;
+  width: 400px;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
