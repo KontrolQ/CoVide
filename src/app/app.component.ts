@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { AlertController } from '@ionic/angular';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { Router, NavigationEnd, Event } from '@angular/router';
+import { Router, Event } from '@angular/router';
 
 @Component({
   selector: 'app-root',
