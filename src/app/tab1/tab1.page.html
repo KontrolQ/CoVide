@@ -7,25 +7,32 @@
 </ion-header> -->
 
 <ion-content>
-  <ion-refresher close-duration slot="fixed" (ionRefresh)="refreshContent($event)">
+  <ion-refresher
+    close-duration
+    slot="fixed"
+    (ionRefresh)="refreshContent($event)"
+  >
     <ion-refresher-content> </ion-refresher-content>
   </ion-refresher>
   <div class="headerArea">
     <div class="dummy_text">
       <h1>Hello, User</h1>
       <p>
-        Coronavirus disease (COVID-19) is an infectious disease caused by a newly
-        discovered coronavirus. Stay home, stay safe.
+        Coronavirus disease (COVID-19) is an infectious disease caused by a
+        newly discovered coronavirus. Stay home, stay safe.
       </p>
     </div>
   </div>
 
   <div class="dataArea">
-    <div class="chartData" style="position: relative; height:40vh; width:100%">
+    <div
+      class="chartData"
+      style="position: relative; height: 40vh; width: 100%;"
+    >
       <canvas id="history_data"></canvas>
     </div>
 
-    <h3 class="blueback lil-left top-mar">Symptoms</h3>
+    <!-- <h3 class="blueback lil-left top-mar">Symptoms</h3>
 
     <div class="horizontal-scroll">
       <div class="cardUI">
@@ -58,7 +65,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="scroller">
     </div> -->
     <!-- <ion-header collapse="condense">
@@ -110,10 +117,14 @@
       <div *ngIf="showNotification" class="notification-container">
         <h3>
           Notifications
-          <i class="material-icons dp48 right" (click)="closeNotification()">close</i>
+          <i class="material-icons dp48 right" (click)="closeNotification()"
+            >close</i
+          >
         </h3>
         <div *ngFor="let item of updates">
-          <ion-label class="notification new" for="size_1">{{ item.update }}</ion-label>
+          <ion-label class="notification new" for="size_1"
+            >{{ item.update }}</ion-label
+          >
         </div>
       </div>
     </main>
