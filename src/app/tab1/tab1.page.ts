@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { NavController, AlertController } from '@ionic/angular';
+import { NavController, AlertController, ModalController } from '@ionic/angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import * as Chart from 'chart.js';
+import { NotificationsModalPage } from '../notifications-modal/notifications-modal.page';
 
 @Component({
   selector: 'app-tab1',
@@ -19,13 +20,21 @@ export class Tab1Page implements OnInit {
   constructor(
     private navController: NavController,
     private alertController: AlertController,
-    private browser: InAppBrowser
+    private browser: InAppBrowser,
+    private modalController: ModalController
   ) { }
 
   ngOnInit() {
     this.getRecentData();
     this.checkUpdate();
     this.loadData();
+  }
+
+  async presentNotificationModal() {
+    const modal = await this.modalController.create({
+      component: NotificationsModalPage
+    });
+    return await modal.present();
   }
 
   getRecentData() {
@@ -61,22 +70,42 @@ export class Tab1Page implements OnInit {
     gradient.addColorStop(0, 'rgba(58,72,237,0.3)');
     gradient.addColorStop(1, 'rgba(255,255,255,1)');
     const myChart = new Chart(ctx, {
-      type: 'line',
+      type: 'bar',
       data: {
         labels: labelsData,
         datasets: [{
           label: 'Total Reported Cases',
           data: datasetData,
-          backgroundColor: 'transparent',
-          borderColor: '#3a48ed',
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(131, 255, 64, 0.2)',
+            'rgba(64, 223, 255, 0.2)',
+            'rgba(255, 64, 195, 0.2)',
+            'rgba(179, 71, 21, 0.2)',
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(131, 255, 64, 1)',
+            'rgba(64, 223, 255, 1)',
+            'rgba(255, 64, 195, 1)',
+            'rgba(179, 71, 21, 1)',
+        ],
+        borderWidth: 1
         }]
       },
       options: {
-        point: {
-          radius: 3
-        },
         legend: {
-          display: false
+          display: false,
         },
         maintainAspectRatio: false,
         scales: {
