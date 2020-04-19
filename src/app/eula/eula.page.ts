@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { NavController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { EulaModalPage } from '../eula-modal/eula-modal.page';
 
 @Component({
   selector: 'app-eula',
@@ -11,10 +13,18 @@ export class EulaPage implements OnInit {
 
   constructor(
     private nativeStorage: NativeStorage,
-    private navController: NavController
+    private navController: NavController,
+    public modalController: ModalController
   ) { }
 
   ngOnInit() {
+  }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: EulaModalPage
+    });
+    return await modal.present();
   }
 
   acceptEULA() {
@@ -23,6 +33,11 @@ export class EulaPage implements OnInit {
         () => this.navController.navigateRoot(''),
         error => console.error('Error storing item', error)
       );
+  }
+
+  play_sound() {
+    const audio = new Audio('../../assets/audio/CoVide.mp3');
+    audio.play();
   }
 
 }

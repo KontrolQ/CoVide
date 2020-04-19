@@ -53,6 +53,10 @@ const routes: Routes = [
   {
     path: 'district-wise',
     loadChildren: () => import('./district-wise/district-wise.module').then( m => m.DistrictWisePageModule)
+  },
+  {
+    path: 'eula-modal',
+    loadChildren: () => import('./eula-modal/eula-modal.module').then( m => m.EulaModalPageModule)
   }
 ];
 @NgModule({

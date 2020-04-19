@@ -1,11 +1,24 @@
 <ion-content>
-  <div style="background-color: #ECF4F3; height: 100vh;">
+  <div class="fullPage">
+    <div class="image"></div>
+    <div class="text">
+      <h1 class="title">COVIDE<span (click)="play_sound()" class="play_sound"><ion-icon name="volume-high-outline"></ion-icon></span></h1>
+      <p class="subtitle">By using this app, you agree to the <a (click)="presentModal()">license agreement</a>.</p>
+    </div>
+    <div class="button_getStarted">
+      <button (click)="acceptEULA()" class="get_started">
+        <span>Get Started</span>
+        <span class="end"><ion-icon name="arrow-forward-outline"></ion-icon></span>
+      </button>
+    </div>
+  </div>
+  <!-- <div style="background-color: #ECF4F3; height: 100vh;">
     <div class="titleContainer">
       <h1 class="title">COVIDE License Agreement</h1>
     </div>
-    <div class="paddedContent">
-      <!-- <h5>The Application</h5> -->
-      <p>"COVIDE" (pronounced as Co-Wide), here forward referred as "app" is an application built for providing live
+    <div class="paddedContent"> -->
+  <!-- <h5>The Application</h5> -->
+  <!-- <p>"COVIDE" (pronounced as Co-Wide), here forward referred as "app" is an application built for providing live
         status of current COVID-19 Coronavirus scenario. The app also provides additional data about current patients of
         COVID-19 and travel information happening within the country. This app can also be used to find shelter and food
         during the need of necessity.</p>
@@ -27,5 +40,5 @@
     <div class="agree">
       <ion-button (click)="acceptEULA()" color="lightgreen" class="button_eula ion-activatable ripple-parent" mode="ios">Agree and Continue<ion-ripple-effect type="unbounded"></ion-ripple-effect></ion-button>
     </div>
-  </div>
+  </div> -->
 </ion-content>
