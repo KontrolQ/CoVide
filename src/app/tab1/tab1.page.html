@@ -55,6 +55,25 @@
     Last update:
     <span id="last_update"></span>
   </div> -->
+
+  <div class="notification-icon right" (click)="loadNotification()">
+    <i class="material-icons dp48">notifications</i>
+  </div>
+  <main>
+    <div *ngIf="showNotification" class="notification-container">
+      <h3>
+        Notifications
+        <i class="material-icons dp48 right" (click)="closeNotification()"
+          >close</i
+        >
+      </h3>
+      <div *ngFor="let item of updates">
+        <ion-label class="notification new" for="size_1"
+          >{{ item.update }}</ion-label
+        >
+      </div>
+    </div>
+  </main>
   <div class="spacer-top"></div>
   <div class="cards">
     <div class="grid-layout">
