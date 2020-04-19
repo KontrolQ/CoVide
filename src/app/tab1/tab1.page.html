@@ -9,8 +9,10 @@
 <ion-content color="blue-background">
   <div class="dummy_text">
     <h1>Hello, User</h1>
-    <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Stay home, stay
-      safe.</p>
+    <p>
+      Coronavirus disease (COVID-19) is an infectious disease caused by a newly
+      discovered coronavirus. Stay home, stay safe.
+    </p>
   </div>
 
   <div class="chartData">
@@ -22,7 +24,12 @@
   <div class="horizontal-scroll">
     <div class="cardUI">
       <div class="card_grid">
-        <div class="avatar" style="background-image: url(../../assets/images/symptoms/coughing.png);"></div>
+        <div
+          class="avatar"
+          style="
+            background-image: url(../../assets/images/symptoms/coughing.png);
+          "
+        ></div>
         <div class="text">
           <h1>Coughing</h1>
         </div>
@@ -30,7 +37,12 @@
     </div>
     <div class="cardUI">
       <div class="card_grid">
-        <div class="avatar" style="background-image: url(../../assets/images/symptoms/coughing.png);"></div>
+        <div
+          class="avatar"
+          style="
+            background-image: url(../../assets/images/symptoms/coughing.png);
+          "
+        ></div>
         <div class="text">
           <h1>Coughing</h1>
         </div>
@@ -38,7 +50,12 @@
     </div>
     <div class="cardUI">
       <div class="card_grid">
-        <div class="avatar" style="background-image: url(../../assets/images/symptoms/coughing.png);"></div>
+        <div
+          class="avatar"
+          style="
+            background-image: url(../../assets/images/symptoms/coughing.png);
+          "
+        ></div>
         <div class="text">
           <h1>Coughing</h1>
         </div>
@@ -52,7 +69,11 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header> -->
-  <ion-refresher close-duration slot="fixed" (ionRefresh)="refreshContent($event)">
+  <ion-refresher
+    close-duration
+    slot="fixed"
+    (ionRefresh)="refreshContent($event)"
+  >
     <ion-refresher-content> </ion-refresher-content>
   </ion-refresher>
   <!-- <div class="card-slider">
@@ -72,7 +93,7 @@
       </div>
     </ion-card>
     <ion-card
-      class="sym-card tips"
+      class="sym-card tipsgit 
       color="lightergrey"
       (click)="loadPage('tips-to-safe')"
     >
@@ -91,6 +112,25 @@
     Last update:
     <span id="last_update"></span>
   </div> -->
+
+  <div class="notification-icon right" (click)="loadNotification()">
+    <i class="material-icons dp48">notifications</i>
+  </div>
+  <main>
+    <div *ngIf="showNotification" class="notification-container">
+      <h3>
+        Notifications
+        <i class="material-icons dp48 right" (click)="closeNotification()"
+          >close</i
+        >
+      </h3>
+      <div *ngFor="let item of updates">
+        <ion-label class="notification new" for="size_1"
+          >{{ item.update }}</ion-label
+        >
+      </div>
+    </div>
+  </main>
   <div class="spacer-top"></div>
   <div class="cards">
     <div class="grid-layout">

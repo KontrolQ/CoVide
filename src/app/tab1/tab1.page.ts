@@ -10,16 +10,16 @@ import * as Chart from 'chart.js';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page implements OnInit {
-
   major = 0;
   minor = 1;
   patch = 0;
-
+  updates = [];
+  showNotification = false;
   constructor(
     private navController: NavController,
     private alertController: AlertController,
     private browser: InAppBrowser
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.checkUpdate();
@@ -29,35 +29,54 @@ export class Tab1Page implements OnInit {
   async updateApp() {
     const alert = await this.alertController.create({
       header: 'App Update Available!',
-      message: 'We will take you to our website. Download the app and install it manually.!',
+      message:
+        'We will take you to our website. Download the app and install it manually.!',
       buttons: [
         {
           text: 'Later',
           role: 'cancel',
-          cssClass: 'secondary'
-        }, {
+          cssClass: 'secondary',
+        },
+        {
           text: 'Okay',
           handler: () => {
             this.getUpdate();
-          }
-        }
-      ]
+          },
+        },
+      ],
     });
 
     await alert.present();
   }
-
+  closeNotification() {
+    this.showNotification = false;
+  }
+  loadNotification() {
+    if (this.showNotification === true) { this.showNotification = false; }
+    this.showNotification = true;
+    $.get('https://api.covid19india.org/updatelog/log.json', (data) => {
+      this.updates = data;
+    });
+    console.log('hi');
+  }
   getUpdate() {
     window.open('https://theorangecoffeeproject.github.io/CoVide/', '_system');
   }
 
   checkUpdate() {
-    $.get('https://raw.githubusercontent.com/TheOrangeCoffeeProject/CoVide/master/updateData.json', (data) => {
-      const updateData = JSON.parse(data);
-      if (updateData.major !== this.major || updateData.minor !== this.minor || updateData.patch !== this.patch) {
-        this.updateApp();
+    $.get(
+      'https://raw.githubusercontent.com/TheOrangeCoffeeProject/CoVide/master/updateData.json',
+      (data) => {
+        const updateData = JSON.parse(data);
+        if (
+          updateData.major !== this.major ||
+          updateData.minor !== this.minor ||
+          updateData.patch !== this.patch
+        ) {
+          this.updateApp();
+        }
       }
-    });
+    );
   }
 
   refreshContent(event) {
@@ -83,8 +102,8 @@ export class Tab1Page implements OnInit {
       $('#daily_active').text(
         // tslint:disable: radix
         parseInt(data.statewise[0].deltaconfirmed) -
-        (parseInt(data.statewise[0].deltarecovered) +
-          parseInt(data.statewise[0].deltadeaths))
+          (parseInt(data.statewise[0].deltarecovered) +
+            parseInt(data.statewise[0].deltadeaths))
       );
       $('#last_update').text(data.statewise[0].lastupdatedtime);
       disabled = false;
