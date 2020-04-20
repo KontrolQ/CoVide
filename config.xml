@@ -3,7 +3,7 @@
     <name>COVIDE</name>
     <description>Track COVID-19 Coronavirus statusbar</description>
     <author email="kumarpriyansh@icloud.com" href="https://www.github.com/luciferreeves/CoVide">COVIDE Team</author>
-    <content original-src="index.html" src="http://localhost:8101" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -14,7 +14,6 @@
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />
-    <preference name="loadUrlTimeoutValue" value="60000" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
@@ -114,5 +113,4 @@
         <icon src="resources/windows/icon/StoreLogo.png" target="StoreLogo" />
         <splash src="resources/windows/splash/Splash.png" target="SplashScreen" />
     </platform>
-    <allow-navigation href="http://localhost:8101" sessionid="63664bb2" />
 </widget>

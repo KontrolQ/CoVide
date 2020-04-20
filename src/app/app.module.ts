@@ -11,14 +11,23 @@ import { AppComponent } from './app.component';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { SeekHelpResultModalPage } from './seek-help-result-modal/seek-help-result-modal.page';
+import { SeekHelpResultModalPageModule } from './seek-help-result-modal/seek-help-result-modal.module';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { EulaModalPage } from './eula-modal/eula-modal.page';
+import { EulaModalPageModule } from './eula-modal/eula-modal.module';
 import { NotificationsModalPage } from './notifications-modal/notifications-modal.page';
+import { NotificationsModalPageModule } from './notifications-modal/notifications-modal.module';
 
 @NgModule({
-  declarations: [AppComponent, SeekHelpResultModalPage, EulaModalPage, NotificationsModalPage],
+  declarations: [AppComponent],
   entryComponents: [SeekHelpResultModalPage, EulaModalPage, NotificationsModalPage],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    SeekHelpResultModalPageModule,
+    EulaModalPageModule,
+    NotificationsModalPageModule],
   providers: [
     StatusBar,
     SplashScreen,
