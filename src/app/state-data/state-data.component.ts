@@ -76,7 +76,7 @@ export class StateDataComponent implements OnInit {
       "https://img.traveltriangle.com/blog/wp-content/uploads/2017/08/yak-ride.jpg",
   };
 
-  constructor(private navController: NavController) {}
+  constructor(private navController: NavController) { }
 
   ngOnInit() {
     this.getStateData();
@@ -159,7 +159,7 @@ export class StateDataComponent implements OnInit {
         </div>
       </div>`);
     }
-    $(".cardToClickForStateData").click((event) => {
+    $('.cardToClickForStateData').click((event) => {
       const name = event.currentTarget.id;
       this.navController.navigateForward(`district-wise?state=${name}`);
     });
