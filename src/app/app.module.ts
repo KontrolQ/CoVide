@@ -13,10 +13,11 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { SeekHelpResultModalPage } from './seek-help-result-modal/seek-help-result-modal.page';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { EulaModalPage } from './eula-modal/eula-modal.page';
+import { NotificationsModalPage } from './notifications-modal/notifications-modal.page';
 
 @NgModule({
-  declarations: [AppComponent, SeekHelpResultModalPage, EulaModalPage],
-  entryComponents: [SeekHelpResultModalPage, EulaModalPage],
+  declarations: [AppComponent, SeekHelpResultModalPage, EulaModalPage, NotificationsModalPage],
+  entryComponents: [SeekHelpResultModalPage, EulaModalPage, NotificationsModalPage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

@@ -57,6 +57,10 @@ const routes: Routes = [
   {
     path: 'eula-modal',
     loadChildren: () => import('./eula-modal/eula-modal.module').then( m => m.EulaModalPageModule)
+  },
+  {
+    path: 'notifications-modal',
+    loadChildren: () => import('./notifications-modal/notifications-modal.module').then( m => m.NotificationsModalPageModule)
   }
 ];
 @NgModule({

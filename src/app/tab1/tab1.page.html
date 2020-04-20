@@ -15,6 +15,9 @@
     <ion-refresher-content> </ion-refresher-content>
   </ion-refresher>
   <div class="headerArea">
+    <div class="notification" (click)="presentNotificationModal()">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </div>
     <div class="dummy_text">
       <h1>Hello, User</h1>
       <p>
@@ -27,8 +30,9 @@
   <div class="dataArea">
     <div
       class="chartData"
-      style="position: relative; height: 40vh; width: 100%;"
+      style="position: relative; height: 40vh; width: 90%;"
     >
+      <h4 style="font-weight: 400;" class="blueback">Cases in Last 10 Days</h4>
       <canvas id="history_data"></canvas>
     </div>
 
@@ -109,11 +113,7 @@
       Last update:
       <span id="last_update"></span>
     </div> -->
-
-    <div class="notification-icon right" (click)="loadNotification()">
-      <i class="material-icons dp48">notifications</i>
-    </div>
-    <main>
+    <!-- <main>
       <div *ngIf="showNotification" class="notification-container">
         <h3>
           Notifications
@@ -127,7 +127,7 @@
           >
         </div>
       </div>
-    </main>
+    </main> -->
     <div class="spacer-top"></div>
     <div class="cards">
       <div class="grid-layout">
