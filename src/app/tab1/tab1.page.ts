@@ -16,7 +16,7 @@ import { NotificationsModalPage } from "../notifications-modal/notifications-mod
 })
 export class Tab1Page implements OnInit {
   major = 0;
-  minor = 1;
+  minor = 2;
   patch = 0;
   updates = [];
   showNotification = false;
