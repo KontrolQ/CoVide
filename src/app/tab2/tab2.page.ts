@@ -65,23 +65,14 @@ export class Tab2Page {
      </ion-card-header>
      <ion-card-content>
        <ion-row>
-       <ion-col style='color: #501717; text-align: center; background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(248, 235, 234, 1) 100%
-      );'>
+       <ion-col style='color: #501717; text-align:center;'>
         <div>Affected</div>
         <div >${this.countryData[i].TotalConfirmed}</div>
         <div style='font-size: 11px;'>+ [${
           this.countryData[i].NewConfirmed
         }]</div>
        </ion-col>
-       <ion-col style='text-align: center; color: #23308e;
-       background: linear-gradient(
-         90deg,
-         rgba(255, 255, 255, 1) 0%,
-         rgba(234, 243, 248, 1) 100%
-       );'>
+       <ion-col style='text-align: center; color: #23308e;'>
        <div >Active</div>
        <div >${
          parseInt(this.countryData[i].TotalConfirmed) -
@@ -89,23 +80,13 @@ export class Tab2Page {
            parseInt(this.countryData[i].TotalDeaths))
        }</div>
        </ion-col>
-       <ion-col style='text-align: center; color: #238e43;
-       background: linear-gradient(
-         90deg,
-         rgba(255, 255, 255, 1) 0%,
-         rgba(234, 248, 234, 1) 100%
-       );'>
+       <ion-col style='text-align: center; color: #238e43;'>
        <div >Recovered</div>
 
        <div >${this.countryData[i].TotalRecovered}</div>
   <div style='font-size: 11px;'>+ [${this.countryData[i].NewRecovered}]</div>
        </ion-col>
-       <ion-col style="text-align: center; color: #2f2f2f;
-       background: linear-gradient(
-         90deg,
-         rgba(255, 255, 255, 1) 0%,
-         rgba(180, 180, 180, 1) 100%
-       );"
+       <ion-col style="text-align: center; color: #2f2f2f;"
        >
        <div>Deceased</div>
         <div >${this.countryData[i].TotalDeaths}</div>

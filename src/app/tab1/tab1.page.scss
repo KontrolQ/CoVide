@@ -118,36 +118,40 @@ ion-content ion-toolbar {
   border-radius: 4px;
 }
 .affected {
+  text-align: center;
   color: #501717;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(248, 235, 234, 1) 100%
-  );
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(248, 235, 234, 1) 100%
+  // );
 }
 .active {
+  text-align: center;
   color: #23308e;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(234, 243, 248, 1) 100%
-  );
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(234, 243, 248, 1) 100%
+  // );
 }
 .recovered {
+  text-align: center;
   color: #238e43;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(234, 248, 234, 1) 100%
-  );
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(234, 248, 234, 1) 100%
+  // );
 }
 .deceased {
+  text-align: center;
   color: #2f2f2f;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(180, 180, 180, 1) 100%
-  );
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(180, 180, 180, 1) 100%
+  // );
 }
 .tip {
   font-size: 12px;
@@ -286,8 +290,6 @@ p b {
 }
 
 // notification
-
-
 
 // body {
 //   padding: 5% 0;
@@ -507,7 +509,6 @@ p b {
     color: #ffffff;
   }
 }
-
 
 .headerArea {
   background-color: #3a48ed;

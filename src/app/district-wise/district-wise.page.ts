@@ -60,7 +60,7 @@ export class DistrictWisePage implements OnInit {
   }
   updateUI() {
     $("#district-row").append(`
-    <ion-row style='background-color: grey; color: white; height:40px;'>
+    <ion-row style='background-color: grey; color: white;'>
     <ion-col style='margin-top:4px;margin-left: 10px;'>District</ion-col>
     <ion-col style='margin-top:4px;' >Case</ion-col>
     </ion-row>`);
@@ -71,7 +71,9 @@ export class DistrictWisePage implements OnInit {
     list.forEach((element) => {
       $("#district-row").append(`
       <ion-row style='height:40px;border: 1px solid grey;'>
-      <ion-col style='margin-top:4px;margin-left: 10px;'>${element.district}</ion-col>
+      <ion-col style='margin-top:4px;margin-left: 10px; white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;'>${element.district}</ion-col>
       <ion-col style='margin-top:4px;' >${element.data["confirmed"]}</ion-col>
       </ion-row>
       `);

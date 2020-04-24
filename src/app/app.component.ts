@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { Platform, NavController, ToastController } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { NativeStorage } from '@ionic-native/native-storage/ngx';
-import { AlertController } from '@ionic/angular';
-import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { Router, Event } from '@angular/router';
+import { Platform, NavController, ToastController } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { NativeStorage } from "@ionic-native/native-storage/ngx";
+import { AlertController } from "@ionic/angular";
+import { ScreenOrientation } from "@ionic-native/screen-orientation/ngx";
+import { Router, Event } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  selector: "app-root",
+  templateUrl: "app.component.html",
+  styleUrls: ["app.component.scss"],
 })
 export class AppComponent implements OnInit {
-
   currentUrl: string;
 
   constructor(
@@ -41,14 +40,14 @@ export class AppComponent implements OnInit {
     let lastTimeBackPress = 0;
     const timePeriodToExit = 2000;
     this.platform.backButton.subscribeWithPriority(0, async () => {
-      if (this.currentUrl.includes('home')) {
+      if (this.currentUrl.includes("home")) {
         if (new Date().getTime() - lastTimeBackPress < timePeriodToExit) {
-          navigator['app'].exitApp();
+          navigator["app"].exitApp();
         } else {
           const toast = await this.toastCtrl.create({
-            message: 'Press back again to exit App',
+            message: "Press back again to exit app",
             duration: 3000,
-            position: 'bottom'
+            position: "bottom",
           });
           toast.present();
           lastTimeBackPress = new Date().getTime();
@@ -59,34 +58,33 @@ export class AppComponent implements OnInit {
     });
   }
 
-
   lockScreenOrientation() {
-    if (this.platform.is('cordova')) {
+    if (this.platform.is("cordova")) {
       this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     }
   }
 
   async noInternetAlert() {
     const alert = await this.alertController.create({
-      header: 'No Internet Connection',
+      header: "No Internet Connection",
       // tslint:disable-next-line: max-line-length
-      message: 'The app needs to be consistently connected to the internet to fetch live status. Please check your internet connection and try again.',
-      buttons: ['OK']
+      message:
+        "The app needs to be consistently connected to the internet to fetch live status. Please check your internet connection and try again.",
+      buttons: ["OK"],
     });
 
     await alert.present();
   }
 
   initializeApp() {
-    this.nativeStorage.getItem('eluaAccepted')
-      .then(
-        data => {
-          this.navController.navigateRoot('');
-        },
-        error => {
-          // this.navController.navigateRoot('eula');
-        }
-      );
+    this.nativeStorage.getItem("eluaAccepted").then(
+      (data) => {
+        this.navController.navigateRoot("");
+      },
+      (error) => {
+        this.navController.navigateRoot("eula");
+      }
+    );
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();

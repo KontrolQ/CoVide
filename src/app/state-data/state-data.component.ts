@@ -116,17 +116,24 @@ export class StateDataComponent implements OnInit {
       const state = this.stateData[i].state.replace(/\s/g, "").toLowerCase();
       const imageSource = this.pictures[state];
       $("#state_data_card").append(`
-      <div id="${this.stateData[i].state}" class="cardToClickForStateData" style="background-color: #f2f2f2;display: inline-block; padding: 15px; border-radius: 12px; width: 85%; height: 450px; margin: 0px 10px 0px 0px;
-       box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.06);">
+      <div id="${this.stateData[i].state}" class="cardToClickForStateData" style="background-color: #f2f2f2;display: inline-block; padding: 15px; border-radius: 12px; width: 85%; height: 470px; margin: 0px 10px 0px 0px; 
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.06);">
        <img src="${imageSource}" style="height: 230px;
        width: 100%;
        pointer-events: none;" />
        <div style="  display: grid; grid-template-columns: auto; grid-gap: 10px;">
-        <div id="${this.stateData[i].state}" style="text-align: center;">
+        <div id="${this.stateData[i].state}" style="text-align: center;  white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;">
             <div style='color: red; font-size: 15px;'>+${this.stateData[i].deltaconfirmed} Today</div>
             <div>
-            <ion-row>
-            <ion-col style="font-size: 20px;">${this.stateData[i].state}</ion-col>
+            <ion-row style=" white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;">
+            <ion-col style="font-size: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${this.stateData[i].state}</ion-col>
             </ion-row>
             </div>
         </div>
@@ -155,7 +162,7 @@ export class StateDataComponent implements OnInit {
              </ion-col>
             </ion-row>
           </div>
-          <div style='font-size: 15px; text-align: center;'>View districts >></div>
+          <div style='font-size: 15px; text-align: center; margin-bottom: 10px;'>View districts >></div>
         </div>
       </div>`);
     }
