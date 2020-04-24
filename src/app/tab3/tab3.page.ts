@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { LoadingController, AlertController, ModalController } from '@ionic/angular';
+import { LoadingController, AlertController, ModalController, NavController } from '@ionic/angular';
 import { SeekHelpResultModalPage } from '../seek-help-result-modal/seek-help-result-modal.page';
 
 @Component({
@@ -23,7 +23,8 @@ export class Tab3Page implements OnInit {
   constructor(
     public loadingController: LoadingController,
     public alertController: AlertController,
-    public modalController: ModalController
+    public modalController: ModalController,
+    public navController: NavController
   ) { }
 
   ngOnInit() {
@@ -88,6 +89,10 @@ export class Tab3Page implements OnInit {
       $('#stateSelectSheet').append(`<ion-select-option value="${state}">${state}</ion-select-option>`);
     }
     this.setCities();
+  }
+
+  loadPage(page) {
+    this.navController.navigateForward(page);
   }
 
   setCities() {
