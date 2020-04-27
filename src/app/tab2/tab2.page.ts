@@ -52,17 +52,13 @@ export class Tab2Page implements OnInit {
 
       const key = primer ?
         // tslint:disable: only-arrow-functions
-        function (x) {
-          return primer(x[field]);
-        } :
-        function (x) {
-          return x[field];
-        };
+        function(x) { return primer(x[field]); } :
+        function(x) { return x[field]; };
 
       reverse = !reverse ? 1 : -1;
 
-      return function (a, b) {
-        return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+      return function(a, b) {
+        return a = key(a), b = key(b), reverse * (+(a > b) - +(b > a));
       };
     };
     this.countryData = data;
