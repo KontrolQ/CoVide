@@ -1,16 +1,49 @@
+<ion-header>
+  <ion-toolbar color="blue">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="ifp">
+      <h1>About COVIDE</h1>
+      <p style="margin-top: 10px;">Who made it possible?</p>
+    </div>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
   <div class="fullPage">
     <div class="image"></div>
     <div class="text">
       <h1 class="title">COVIDE<span (click)="play_sound()" class="play_sound"><ion-icon name="volume-high-outline"></ion-icon></span></h1>
+      <h5 class="title_small">v0.3.0</h5>
       <p class="subtitle">By using this app, you agree to the <a (click)="presentModal()">license agreement</a>.</p>
+      <p class="subtitle">
+        Developed by <em><strong>Lucifer Conrad Reeves</strong></em> and
+        <em><strong>Rohit Singh</strong></em> for humans.
+      </p>
+      <p class="subtitle">
+        App Icon (Called "Stay away from him 🙏") by
+        <em><strong>Gustavo Zambelli</strong></em
+        >.
+      </p>
+      <p class="subtitle">
+        App Design Inspiration and Color Layout by
+        <em><strong>Nazirul Hoque 🏆</strong></em
+        >.
+      </p>
+      <p class="subtitle">
+        App Splash Screen Illustration by <em><strong>FireArt Studio</strong></em
+        >.
+      </p>
+      <p class="subtitle">
+        <strong><em>THE ORANGE COFFEE PROJECT</em></strong>
+      </p>
     </div>
-    <div class="button_getStarted">
+    <!-- <div class="button_getStarted">
       <button (click)="acceptEULA()" class="get_started">
         <span>Get Started</span>
         <span class="end"><ion-icon name="arrow-forward-outline"></ion-icon></span>
       </button>
-    </div>
+    </div> -->
   </div>
   <!-- <div style="background-color: #ECF4F3; height: 100vh;">
     <div class="titleContainer">

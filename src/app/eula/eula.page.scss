@@ -6,6 +6,30 @@
     text-align: justify;
 }
 
+.padded {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.centered {
+    margin-top: 5vh;
+    width: 120px;
+    border-radius: 16px;
+}
+.centered-small {
+    width: 72px;
+    border-radius: 16px;
+}
+.ifp {
+    // text-transform: capitalize;
+    text-align: center;
+    color: white;
+    background-color: #3a48ed;
+    padding: 30px 0px;
+    position: relative;
+    left: -20px;
+}
+
 .paddedContent > h5 {
     color: #4aa98f;
 }
@@ -23,6 +47,12 @@
     text-align: center;
     color: #fff;
     font-size: 2rem;
+    font-weight: 700;
+}
+.title_small {
+    text-align: center;
+    color: #fff;
+    font-size: 1.3rem;
     font-weight: 700;
 }
 .agree {
@@ -47,9 +77,8 @@
 
 .fullPage {
     width: 100%;
-    min-height: 100vh;
     background-color: #3A48ED;
-    padding: 5vh 0px;
+    padding: 2vh 0px;
 }
 
 .image {
