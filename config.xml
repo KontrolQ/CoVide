@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.luciferreeves.covide" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.luciferreeves.covide" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>COVIDE</name>
     <description>Track COVID-19 Coronavirus statusbar</description>
     <author email="kumarpriyansh@icloud.com" href="https://www.github.com/luciferreeves/CoVide">COVIDE Team</author>
