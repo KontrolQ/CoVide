@@ -28,3 +28,19 @@ table {
   // position: relative;
   // left: -20px;
 }
+
+.chartData {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90%;
+  margin: 0 auto;
+}
+.horizontal-scroll {
+  padding: 5%;
+  overflow: auto;
+  width: 400px;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
