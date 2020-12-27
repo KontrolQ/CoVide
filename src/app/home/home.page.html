@@ -1,20 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title size="large">CoVide</ion-title>
+    <ion-button mode="ios" shape="round" fill="outline" color="primary" slot="end" (click)="playSound()"><ion-icon name="volume-high-outline"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true" mode="ios">
+  <section class="padding">
+    <h3 class="smallcaps">COVIDE END USER LICENSE AGREEMENT</h3>
+    <p class="legal">CoVide (pronounced as Co-Wide) is available under the MIT license. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+    <p class="legal">The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+    <p class="legal">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+    <p class="legal">"COVIDE" here forward referred as "app" is an application built for providing live status of current COVID-19 Coronavirus scenario. The app also provides additional data about current patients of COVID-19 and travel information happening within the country. This app can also be used to find shelter and food during the need of necessity.</p>
+    <p class="legal">The app is fully open source and can be modified as per requirement. Additionally, no personal data is collected by this app.</p>
+    <p class="legal">The app comes on an "AS IS" basis and no guarantee or warranty is applicable to any part or data displayed in the app. The app, although completely harmless, is intended to be installed on a self-risk basis and the developers aren't and won't be responsible in any manner and could not be summoned under any authority. All the data that is shown in this app is publicly available data and the developers aren't responsible for any kind of data mismatch or invalid data shown in the app. Any data discrepancy, could however be reported from the app itself. The reporting is completely anonymous and no personal data is collected, otherwise.</p>
+    <p class="legal">By using this app, you abide by the above terms and conditions. If you wish to make any sugegstions you can do so within the app itself. Also, if you do want to make this app better you're always welcome to contribute to this app. Please see the about section for more details.</p>
+    <p class="legal">This app was made possible by a lot of open source libraries and projects. You can find the information about them in the About section of the app.</p>
+    <p class="legal">By clicking the button below, you agree to the above terms.</p>
+    <h4 class="copyright">Copyright (c) 2020 The Orange Coffee Project</h4>
+  </section>
 </ion-content>
+
+<ion-footer class="ion-no-border">
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button mode="ios" shape="round" color="primary" slot="end">Accept and Continue</ion-button>
+  </ion-toolbar>
+</ion-footer>

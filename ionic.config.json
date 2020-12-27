@@ -1,5 +1,7 @@
 {
   "name": "covide",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

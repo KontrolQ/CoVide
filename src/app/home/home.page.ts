@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  selectedLanguage: string;
+  agreed = false;
+
+  constructor() { }
+
+  playSound() {
+    const audio = new Audio('../../assets/audio/CoVide.mp3');
+    audio.play();
+  }
 
 }
