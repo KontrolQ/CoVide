@@ -32,8 +32,8 @@ export class AppComponent {
             error => console.error(error)
           );
       } else {
-        const accepted: boolean | string = localStorage.getItem('eulaAccepted');
-        if (accepted) {
+        const accepted: string = localStorage.getItem('eulaAccepted');
+        if (accepted === 'true') {
           this.navCtrl.navigateRoot('dashboard');
         } else {
           console.log(accepted);
