@@ -24,7 +24,10 @@ export class HomePage {
   }
 
   acceptAgreement() {
-    if (this.platform.is('cordova')) { } else {
+    if (this.platform.is('cordova')) {
+      this.nativeStorage.setItem('eulaAccepted', 'true');
+      this.navCtrl.navigateRoot('dashboard');
+    } else {
       localStorage.setItem('eulaAccepted', 'true');
       this.navCtrl.navigateRoot('dashboard');
     }

@@ -28,7 +28,7 @@ export class AppComponent {
       if (this.platform.is('cordova')) {
         this.nativeStorage.getItem('eulaAccepted')
           .then(
-            data => console.log(data),
+            data => this.navCtrl.navigateRoot('dashboard'),
             error => console.error(error)
           );
       } else {
