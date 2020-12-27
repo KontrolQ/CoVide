@@ -1,9 +1,5 @@
 {
-  "name": "COVIDE",
-  "integrations": {
-    "capacitor": {},
-    "cordova": {}
-  },
-  "type": "angular",
-  "id": "d95e4128"
+  "name": "covide",
+  "integrations": {},
+  "type": "angular"
 }
