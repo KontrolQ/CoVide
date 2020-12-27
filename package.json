@@ -1,8 +1,8 @@
 {
   "name": "covide",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "version": "0.4.0",
+  "author": "COVIDE Team",
+  "homepage": "https://github.com/TheOrangeCoffeeProject/CoVide",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -50,5 +50,5 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   },
-  "description": "An Ionic project"
+  "description": "COVID-19 Coronavirus Tracker Mobile App"
 }
